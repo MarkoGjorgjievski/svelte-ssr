@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: theme("colors.indigo.500");
+    --color-primary-soft: theme("colors.indigo.100");
+    --color-primary-content: theme("colors.white");
+    --color-primary-focus: theme("colors.indigo.600");
+
+    --color-info: theme("colors.blue.500");
+    --color-info-soft: theme("colors.blue.100");
+    --color-info-content: theme("colors.white");
+    --color-info-focus: theme("colors.blue.600");
+
+    --color-success: theme("colors.green.500");
+    --color-success-soft: theme("colors.green.100");
+    --color-success-content: theme("colors.white");
+    --color-success-focus: theme("colors.green.600");
+
+    --color-warning: theme("colors.yellow.500");
+    --color-warning-soft: theme("colors.yellow.100");
+    --color-warning-content: theme("colors.white");
+    --color-warning-focus: theme("colors.yellow.600");
+
+    --color-danger: theme("colors.red.500");
+    --color-danger-soft: theme("colors.red.100");
+    --color-danger-content: theme("colors.white");
+    --color-danger-focus: theme("colors.red.600");
+
+    --light-shade: 250 250 250;
+    --light-shade-100: 249 250 251; /* gray  50 */
+    --light-shade-200: 229 231 235; /* gray  200 */
+    --light-shade-300: 209 213 219; /* gray  300 */
+    --light-shade-content: 75 85 99;
+
+    --dark-shade: 15 23 42; /* slate-900*/
+    --dark-shade-100: 30 41 59; /* slate-800 */
+    --dark-shade-200: 51 65 85; /* slate-700 */
+    --dark-shade-300: 71 85 105; /* slate-600 */
+    --dark-shade-content: 255 255 255;
+
+    --base: 255 255 255;
+    --base-100: 249 250 251; /* gray  50 */
+    --base-200: 229 231 235; /* gray  200 */
+    --base-300: 209 213 219; /* gray  300 */
+    --base-content: 75 85 99;
+    --inverted: var(--dark-shade);
+    --inverted-100: var(--dark-shade-100);
+    --neutral-content: 55 65 81; /* gray-700*/
+    --neutral-focus: 31 41 55; /* gray-800*/
+    /* --check1: rgb(249, 250, 251);  gray  50 */
+    /* --check2: rgb(243, 244, 246);  gray 100 */
+    /* --check2: rgb(229, 231, 235);  gray 200 */
+    /* --check2: rgb(209, 213, 219);  gray 300 */
+  }
+
+   html[class="dark"] {
+    --base: 15 23 42; /* slate-900*/
+    --base-100: 30 41 59; /* slate-800 */
+    --base-200: 51 65 85; /* slate-700 */
+    --base-300: 71 85 105; /* slate-600 */
+    --base-content: 255 255 255;
+    --inverted: var(--light-shade);
+    --inverted-100: var(--light-shade-100);
+    --neutral-content: 156 163 175; /* gray-400*/
+  }
+
+  html {
+    @apply bg-base;
+  }
+}
+
+@layer utilities {
+  :root {
+    .primary {
+      &.solid {
+        @apply bg-primary text-primary-content;
+      }
+      &.soft {
+        @apply bg-primary-soft text-primary;
+      }
+      &.outline {
+        @apply text-primary border-2 border-primary-soft;
+      }
+      &.ghost {
+        @apply text-primary;
+      }
+    }
+
+    .info {
+      &.solid {
+        @apply bg-info text-info-content;
+      }
+      &.soft {
+        @apply bg-info-soft text-info;
+      }
+      &.outline {
+        @apply text-info border-2 border-info-soft;
+      }
+      &.ghost {
+        @apply text-info;
+      }
+    }
+
+    .success {
+      &.solid {
+        @apply bg-success text-success-content;
+      }
+      &.soft {
+        @apply bg-success-soft text-success;
+      }
+      &.outline {
+        @apply text-success border-2 border-success-soft;
+      }
+      &.ghost {
+        @apply text-success;
+      }
+    }
+
+    .warning {
+      &.solid {
+        @apply bg-warning text-warning-content;
+      }
+      &.soft {
+        @apply bg-warning-soft text-warning;
+      }
+      &.outline {
+        @apply text-warning border-2 border-warning-soft;
+      }
+      &.ghost {
+        @apply text-warning;
+      }
+    }
+
+    .danger {
+      &.solid {
+        @apply bg-danger text-danger-content;
+      }
+      &.soft {
+        @apply bg-danger-soft text-danger;
+      }
+      &.outline {
+        @apply text-danger border-2 border-danger-soft;
+      }
+      &.ghost {
+        @apply text-danger;
+      }
+    }
+
+    .inverted {
+      &.solid {
+        @apply bg-inverted text-base-100;
+      }
+      &.outline {
+        @apply text-inverted border-2 border-base-300;
+      }
+      &.ghost {
+        @apply text-inverted;
+      }
+    }
+
+    .off-base {
+      &.solid {
+        @apply bg-base-300 text-base-content;
+      }
+      &.outline {
+        @apply text-base-content/90 border-2 border-base-200;
+      }
+      &.ghost {
+        @apply text-base-content/90;
+      }
+    }
+
+    .transparent {
+      &.solid {
+        @apply bg-transparent text-neutral-content;
+      }
+      &.outline {
+        @apply text-base-content/90 border-2 border-base-200;
+      }
+      &.ghost {
+        @apply text-base-content;
+      }
+    }
+
+    .neutral {
+      @apply bg-base hover:text-neutral-content border shadow-sm text-neutral-content border-base-200;
+    }
+  }
+}
