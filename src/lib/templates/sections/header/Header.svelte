@@ -79,7 +79,7 @@
 				>
 				<a
 					class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border-2 border-gray-200 font-semibold text-blue-600 hover:bg-blue-50 hover:border-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:hover:bg-blue-600/[.3] dark:border-slate-700 dark:hover:border-blue-500 dark:hover:text-blue-500"
-					href="/auth/signup">Get started</a
+					href="/register">Try for free</a
 				>
 			</div>
 		</div>

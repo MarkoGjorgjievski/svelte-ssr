@@ -1,5 +1,7 @@
 <!-- Card -->
-<div class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-10 dark:border-gray-700">
+<div
+	class="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-10 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm"
+>
 	<h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">Fill in the form</h2>
 
 	<form>
