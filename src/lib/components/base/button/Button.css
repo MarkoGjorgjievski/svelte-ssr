@@ -1,0 +1,156 @@
+.btn {
+  @apply py-3 px-4 inline-flex justify-center items-center gap-2 border border-transparent font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all text-sm h-min select-none focus:ring-offset-base;
+
+  &:disabled {
+    @apply cursor-not-allowed opacity-40;
+  }
+
+  &.loading {
+    & > span[aria-label="loading"] {
+      @apply animate-spin inline-block w-4 h-4 border-[3px] border-current border-t-transparent text-current rounded-full;
+    }
+  }
+
+  &.shrink {
+    @apply flex-shrink-0 h-[2.875rem] w-[2.875rem] p-0;
+  }
+
+  &.full {
+    @apply w-full;
+  }
+
+  &.small {
+    @apply py-2 px-3;
+
+    &.shrink {
+      @apply h-[2.375rem] w-[2.375rem] p-0;
+    }
+
+    &.grouped {
+      @apply py-3 px-4;
+    }
+  }
+
+  &.medium {
+    &.grouped {
+      @apply sm:p-4;
+    }
+  }
+
+  &.large {
+    @apply py-3 px-4 sm:p-5;
+    &.shrink {
+      @apply h-[3.875rem] w-[3.875rem] p-0;
+    }
+
+    &.grouped {
+      @apply sm:p-[1.3125rem];
+    }
+  }
+
+  &.neutral {
+    @apply hover:bg-base-100 hover:text-neutral-content focus:ring-offset-base focus:ring-primary-focus;
+  }
+
+  &.primary {
+    &.solid {
+      @apply focus:ring-primary focus:ring-offset-base hover:bg-primary-focus;
+    }
+    &.soft {
+      @apply hover:bg-primary hover:text-primary-content focus:ring-primary-soft;
+    }
+    &.outline {
+      @apply hover:bg-primary hover:text-primary-content focus:ring-primary-soft hover:border-primary outline-none;
+    }
+    &.ghost {
+      @apply hover:bg-primary-soft hover:text-primary focus:ring-primary outline-none;
+    }
+  }
+
+  &.info {
+    &.solid {
+      @apply focus:ring-info focus:ring-offset-base hover:bg-info-focus;
+    }
+    &.soft {
+      @apply hover:bg-info hover:text-info-content focus:ring-info-soft;
+    }
+    &.outline {
+      @apply hover:bg-info hover:text-info-content focus:ring-info-soft hover:border-info outline-none;
+    }
+    &.ghost {
+      @apply hover:bg-info-soft hover:text-info focus:ring-info outline-none;
+    }
+  }
+
+  &.success {
+    &.solid {
+      @apply focus:ring-success focus:ring-offset-base hover:bg-success-focus;
+    }
+    &.soft {
+      @apply hover:bg-success hover:text-success-content focus:ring-success-soft;
+    }
+    &.outline {
+      @apply hover:bg-success hover:text-success-content focus:ring-success-soft hover:border-success outline-none;
+    }
+    &.ghost {
+      @apply hover:bg-success-soft hover:text-success focus:ring-success outline-none;
+    }
+  }
+
+  &.warning {
+    &.solid {
+      @apply focus:ring-warning focus:ring-offset-base hover:bg-warning-focus;
+    }
+    &.soft {
+      @apply hover:bg-warning hover:text-warning-content focus:ring-warning-soft;
+    }
+    &.outline {
+      @apply hover:bg-warning hover:text-warning-content focus:ring-warning-soft hover:border-warning outline-none;
+    }
+    &.ghost {
+      @apply hover:bg-warning-soft hover:text-warning focus:ring-warning outline-none;
+    }
+  }
+
+  &.danger {
+    &.solid {
+      @apply focus:ring-danger focus:ring-offset-base hover:bg-danger-focus;
+    }
+    &.soft {
+      @apply hover:bg-danger hover:text-danger-content focus:ring-danger-soft;
+    }
+    &.outline {
+      @apply hover:bg-danger hover:text-danger-content focus:ring-danger-soft hover:border-danger outline-none;
+    }
+    &.ghost {
+      @apply hover:bg-danger-soft hover:text-danger focus:ring-danger outline-none;
+    }
+  }
+
+  &.inverted {
+    &.solid {
+      @apply focus:ring-inverted focus:ring-offset-base hover:bg-inverted/95;
+    }
+    &.outline {
+      @apply hover:bg-inverted hover:text-base-100 focus:ring-base-300 hover:border-inverted outline-none;
+    }
+    &.ghost {
+      @apply hover:bg-inverted hover:text-base-100 focus:ring-inverted outline-none;
+    }
+  }
+  &.off-base {
+    &.solid {
+      @apply focus:ring-base-300 focus:ring-offset-base hover:bg-base-200;
+    }
+    &.outline {
+      @apply hover:bg-base-300 hover:text-base-content focus:ring-base-300 hover:border-base-300 outline-none;
+    }
+    &.ghost {
+      @apply hover:bg-base-300 hover:text-base-content focus:ring-base-300 outline-none;
+    }
+  }
+
+  &.grouped {
+    @apply -ml-px hover:!bg-base-100 rounded-none first:rounded-l-lg first:ml-0 last:rounded-r-lg bg-base text-neutral-content align-middle focus:z-10 focus:ring-primary border-base-200 dark:bg-gray-800 font-medium;
+  }
+}

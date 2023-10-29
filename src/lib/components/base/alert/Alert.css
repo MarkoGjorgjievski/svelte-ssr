@@ -1,0 +1,26 @@
+.alert {
+  &.soft {
+    @apply shadow-sm !bg-opacity-70 dark:!bg-opacity-100;
+    &h3 {
+      @apply text-primary;
+    }
+  }
+  &.neutral {
+    @apply shadow-lg;
+  }
+  &.info {
+    @apply border-info/30;
+  }
+
+  &.success {
+    @apply border-success/30;
+  }
+
+  &.warning {
+    @apply border-warning/30;
+  }
+
+  &.danger {
+    @apply border-danger/30;
+  }
+}
