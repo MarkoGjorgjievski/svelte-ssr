@@ -2,7 +2,6 @@
 	import FeaturedSection from '$lib/templates/sections/featured/FeaturedSection.svelte';
 	import QuickAccessCardSection from '$lib/templates/sections/main/QuickAccessCardSection.svelte';
 	import CallToActionSection from '$lib/templates/sections/main/CallToActionSection.svelte';
-	// @ts-ignore
 	import HeroSection from '$lib/templates/sections/hero/HeroSection.svelte';
 </script>
 
