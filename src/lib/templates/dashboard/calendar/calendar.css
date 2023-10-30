@@ -24,6 +24,7 @@
     --fc-today-bg-color: transparent;
     --fc-now-indicator-color: #dc2626;
 }
+
 /* 
 .fc-timegrid-slot-minor {
     border-top: none !important;
@@ -121,6 +122,7 @@
 } */
 
 .fc {
+    @apply text-gray-700 dark:text-gray-400;
     
     .fc-view-harness {
         @media only screen and (max-width: 600px) {

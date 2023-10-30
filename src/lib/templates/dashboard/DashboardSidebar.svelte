@@ -7,7 +7,7 @@
 	const routes = [
 		{ label: 'Dashboard', icon: 'house', slug: baseUrl },
 		{ label: 'Calendar', icon: 'calendar-week', slug: `${baseUrl}/calendar` },
-		{ label: 'Account', icon: 'person-vcard', slug: `${baseUrl}/account` },
+		{ label: 'Account', icon: 'person-vcard', slug: `${baseUrl}/account/general` },
 		{ label: 'Staff', icon: 'people', slug: `${baseUrl}/staff` },
 		{ label: 'Analytics', icon: 'bar-chart', slug: `${baseUrl}/analytics` },
 		{ label: 'Clients', icon: 'stars', slug: `${baseUrl}/clients` }
