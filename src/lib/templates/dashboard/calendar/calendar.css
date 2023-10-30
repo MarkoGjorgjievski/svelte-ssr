@@ -1,0 +1,175 @@
+:root {
+    --fc-small-font-size: .85em;
+    --fc-page-bg-color: rgb(var(--base));
+    --fc-neutral-bg-color: rgb(var(--base));
+    --fc-neutral-text-color: rgb(var(--base-content));
+    --fc-border-color: rgb(var(--base-200));
+    --fc-button-text-color: rgb(var(--base-content));
+    --fc-button-bg-color:  rgb(var(--base));
+    --fc-button-border-color: rgb(var(--base-200));
+    --fc-button-hover-bg-color: rgb(var(--base-100)) !important;
+    --fc-button-hover-border-color: rgb(var(--base-200));
+    --fc-button-active-bg-color: rgb(var(--color-primary)) !important;
+    --fc-button-active-border-color: rgb(var(--color-primary-focus)) !important;
+    --fc-event-bg-color: #3788d8;
+    --fc-event-border-color: #3788d8;
+    --fc-event-text-color: #fff;
+    --fc-event-selected-overlay-color: rgba(0, 0, 0, 0.25);
+    --fc-more-link-bg-color: #d0d0d0;
+    --fc-more-link-text-color: inherit;
+    --fc-non-business-color: repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(215, 215, 215, 0.3) 5px, rgba(215, 215, 215, 0.3) 10px);
+    --fc-bg-event-color: rgb(143, 223, 130);
+    --fc-bg-event-opacity: 0.3;
+    --fc-highlight-color: rgba(188, 232, 241, 0.3);
+    --fc-today-bg-color: transparent;
+    --fc-now-indicator-color: #dc2626;
+}
+/* 
+.fc-timegrid-slot-minor {
+    border-top: none !important;
+}
+
+.fc-scrollgrid {
+    @apply rounded-md overflow-hidden bg-base-100;
+}
+
+.fc-scroller {
+    scroll-behavior: smooth;
+}
+
+
+.fc-timegrid-slot-lane:hover {
+    cursor: pointer;
+    background-color: rgba(215, 215, 215, 0.2);
+}
+.fc .fc-toolbar.fc-header-toolbar {
+    @apply flex px-2 items-center justify-between md:justify-start gap-8 py-3 md:pt-0 text-base;
+    color: hsl(var(--bc));
+    margin: 0 !important;
+    font-size: 0.9em;
+}
+.fc .fc-toolbar {
+    display: flex;
+    @apply justify-start;
+    color: var(--bc);
+}
+
+.fc .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:nth-child(3) {
+    @apply hidden lg:block;
+}
+
+.fc-footer-toolbar .fc-toolbar-chunk {
+    @apply flex flex-col !important;
+}
+
+.fc .fc-toolbar-title {
+    @apply text-base !important;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.fc-timegrid-event { 
+    margin: 0 !important;
+    border-right-width: 0 !important;
+    border-top-width: 0 !important;
+    border-bottom-width: 0 !important;
+    border-left-width: 0 !important;
+    background-color: white;
+}
+
+.fc-timegrid-event:hover {
+    cursor: pointer;
+}
+
+.fc-timegrid-event-harness {
+    position: absolute; 
+    background-color: white;
+}
+
+.fc-media-screen {
+    height: 100%;
+}
+
+.fc .fc-timegrid-slot-label-cushion {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: .75em;
+    font-weight: 400;
+}
+
+
+.fc .fc-col-header-cell-cushion {
+    display: inline-block; 
+    padding: 2px 4px;
+    margin: 2px;
+} */
+/* 
+.fc .fc-col-header-cell {
+    @apply text-neutral font-medium;
+    @apply bg-base-100 !important;
+}
+
+.fc-timegrid-axis {
+    @apply bg-base-100 !important;
+}
+
+.fc .fc-col-header-cell a {
+    width: 24px;
+}
+
+.fc-day-today {
+    @apply text-accent font-bold text-info !important;
+} */
+
+.fc {
+    
+    .fc-view-harness {
+        @media only screen and (max-width: 600px) {
+            height: 600px !important;
+        }
+    }
+
+    .fc-button {
+        @apply py-2 px-3 inline-flex justify-center items-center gap-2 border font-medium bg-white text-gray-700 align-middle hover:bg-gray-50  transition-all  text-sm focus:z-10 active:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 !important
+    }
+
+    .fc-button {
+        @apply rounded-md;
+    }
+
+    .fc-button-group {
+        .fc-button {
+            @apply first:rounded-l-md first:ml-0 last:rounded-r-md;
+        }
+    }
+
+    table[role='grid'] {
+        @apply bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 
+    }
+
+}
+
+/* 
+.fc .fc-button-group .fc-today-button {
+    @apply btn btn-accent btn-block btn-sm w-16 self-center capitalize !important;
+}
+
+.fc .fc-button-group .fc-today-button:disabled {
+    @apply bg-transparent !important;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: hsl(var(--base-10)) !important;
+}
+
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active {
+    @apply font-extrabold !important;
+}
+
+.fc-button {
+    box-shadow: none !important;
+}
+
+.fc-daygrid-day-number {
+    font-size: .85em;
+} */

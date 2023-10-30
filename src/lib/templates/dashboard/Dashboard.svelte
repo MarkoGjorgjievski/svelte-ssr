@@ -17,7 +17,7 @@
 	<title>Alley Barber Shop - Dashboard</title>
 </svelte:head>
 
-<body class="bg-gray-50 dark:bg-slate-900">
+<div class="bg-gray-50 dark:bg-slate-900">
 	<!-- ========== HEADER ========== -->
 	<DashboardHeader />
 	<!-- ========== END HEADER ========== -->
@@ -39,4 +39,4 @@
 	<!-- End Content -->
 
 	<!-- ========== END MAIN CONTENT ========== -->
-</body>
+</div>
