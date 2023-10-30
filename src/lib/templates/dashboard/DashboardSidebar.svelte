@@ -1,6 +1,8 @@
 <script>
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import AccordionSidebarItem from '$lib/components/base/accordion/AccordionSidebarItem.svelte';
+
+	const baseUrl = '/dashboard';
 </script>
 
 <div
@@ -13,68 +15,24 @@
 
 	<nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
 		<ul class="space-y-1.5">
-			<li><AccordionSidebarItem label="Dashboard" icon="bi bi-house" /></li>
-
-			<li class="hs-accordion" id="users-accordion">
-				<AccordionSidebarItem label="Users" icon="bi bi-people" hasChildren />
-
-				<div
-					id="users-accordion-child"
-					class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-				>
-					<ul class="hs-accordion-group pl-3 pt-2" data-hs-accordion-always-open>
-						<li class="hs-accordion" id="users-accordion-sub-1">
-							<AccordionSidebarItem label="Sub Menu" hasChildren />
-
-							<div
-								id="users-accordion-sub-1-child"
-								class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
-							>
-								<ul class="pt-2 pl-2">
-									<li><AccordionSidebarItem label="Item 1" /></li>
-									<li><AccordionSidebarItem label="Item 2" /></li>
-									<li><AccordionSidebarItem label="Item 3" /></li>
-								</ul>
-							</div>
-						</li>
-						<li class="hs-accordion" id="users-accordion-sub-2">
-							<AccordionSidebarItem label="Sub Menu" hasChildren />
-
-							<div
-								id="users-accordion-sub-2-child"
-								class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden pl-2"
-							>
-								<ul class="pt-2 pl-2">
-									<li><AccordionSidebarItem label="Item 1" /></li>
-									<li><AccordionSidebarItem label="Item 2" /></li>
-									<li><AccordionSidebarItem label="Item 3" /></li>
-								</ul>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</li>
-
-			<li class="hs-accordion" id="account-accordion">
-				<AccordionSidebarItem label="Account" icon="bi bi-person-circle" hasChildren />
-
-				<div
-					id="account-accordion-child"
-					class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden"
-				>
-					<ul class="pt-2 pl-2">
-						<li><AccordionSidebarItem label="Item 1" /></li>
-						<li><AccordionSidebarItem label="Item 2" /></li>
-						<li><AccordionSidebarItem label="Item 3" /></li>
-					</ul>
-				</div>
-			</li>
-
+			<li><AccordionSidebarItem label="Dashboard" icon="bi bi-house" slug={baseUrl} /></li>
 			<li>
-				<AccordionSidebarItem label="Calendar" icon="bi bi-calendar-week" />
+				<AccordionSidebarItem
+					label="Calendar"
+					icon="bi bi-calendar-week"
+					slug="{baseUrl}/calendar"
+				/>
 			</li>
-			<li><AccordionSidebarItem label="Analytics" icon="bi bi-bar-chart" /></li>
+			<li>
+				<AccordionSidebarItem label="Account" icon="bi bi-person-vcard" slug="{baseUrl}/account" />
+			</li>
+			<li><AccordionSidebarItem label="Staff" icon="bi bi-people" slug="{baseUrl}/staff" /></li>
+			<li>
+				<AccordionSidebarItem label="Analytics" icon="bi bi-bar-chart" slug="{baseUrl}/analytics" />
+			</li>
+			<li>
+				<AccordionSidebarItem label="Clients" icon="bi bi-stars" slug="{baseUrl}/clients" />
+			</li>
 		</ul>
-		<ThemeSwitcher />
 	</nav>
 </div>
