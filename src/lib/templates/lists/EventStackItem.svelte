@@ -1,6 +1,6 @@
 <!-- Card -->
 <div
-	class="bg-white border border-gray-200 shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]"
+	class="bg-white border border-gray-200 shadow-sm hover:shadow-lg hover:ring-blue-300 hover:ring-1 transition-all duration-200 cursor-pointer rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]"
 >
 	<div class="flex justify-between gap-2 p-3">
 		<div>
@@ -24,7 +24,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="flex justify-end gap-x-2 h-fit">
+		<div class="flex justify-end gap-x-1 h-fit">
 			<!-- <button
 					type="button" -->
 			<button
