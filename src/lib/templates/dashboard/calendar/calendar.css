@@ -10,7 +10,7 @@
     --fc-button-hover-bg-color: rgb(var(--base-100)) !important;
     --fc-button-hover-border-color: rgb(var(--base-200));
     --fc-button-active-bg-color: rgb(var(--color-primary)) !important;
-    --fc-button-active-border-color: rgb(var(--color-primary-focus)) !important;
+    --fc-button-active-border-color: rgb(var(--base-200)) !important;
     --fc-event-bg-color: #3788d8;
     --fc-event-border-color: #3788d8;
     --fc-event-text-color: #fff;
@@ -21,7 +21,7 @@
     --fc-bg-event-color: rgb(143, 223, 130);
     --fc-bg-event-opacity: 0.3;
     --fc-highlight-color: rgba(188, 232, 241, 0.3);
-    --fc-today-bg-color: rgb(var(--base-100));
+    --fc-today-bg-color: rgb(var(--base));
     --fc-now-indicator-color: #dc2626;
 }
 
@@ -124,13 +124,34 @@
 .fc {
     @apply text-gray-700 dark:text-gray-400;
 
- 
+    .fc-col-header {
+        @apply bg-gray-50 dark:bg-slate-800;
+    }
+
+    .fc-header-toolbar {
+        @apply mb-0 px-6 py-4 !important;
+    }
+
     .fc-col-header-cell {
-        @apply font-normal !important;
+        @apply md:px-6 py-[8.5px] !important;
+
+        .fc-col-header-cell-cushion {
+           @apply p-0 text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200;
+        }
 
         &.fc-day-today {
-            @apply bg-inverted-100 font-semibold text-info overflow-hidden !important;
+            .fc-col-header-cell-cushion {
+                
+                @apply relative before:w-1.5 before:h-1.5 before:bg-blue-500
+                before:absolute before:top-1 before:-left-1.5 md:before:-left-2
+                before:text-transparent before:rounded-full before:content-['10'] !important;
+            }
         }
+    }
+
+    .fc-toolbar-title {
+        @apply text-lg font-semibold;
+        font-family: 'Inter', sans-serif;
     }
     
     .fc-view-harness {
@@ -140,21 +161,26 @@
     }
 
     .fc-button {
-        @apply py-2 px-3 inline-flex justify-center items-center gap-2 border font-medium bg-white text-gray-700 align-middle hover:bg-gray-50  transition-all  text-sm focus:z-10 active:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 !important
+        @apply py-2 px-3 inline-flex justify-center items-center gap-2 border font-medium bg-white text-gray-700 align-middle hover:bg-gray-50  transition-all  text-sm focus:z-10 active:border-transparent focus:outline-none focus:ring-2 focus:ring-blue-600 dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 !important;
     }
 
     .fc-button {
         @apply rounded-md;
     }
 
+    .fc-button-active {
+        @apply text-blue-500 !important;
+    }
+
     .fc-button-group {
+        @apply shadow-sm rounded-md;
         .fc-button {
-            @apply first:rounded-l-md first:ml-0 last:rounded-r-md;
+            @apply  first:rounded-l-md first:ml-0 last:rounded-r-md;
         }
     }
 
     table[role='grid'] {
-        @apply bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden; 
+        @apply border-x-transparent overflow-hidden; 
     }
 
 }

@@ -9,7 +9,6 @@
 	let options: CalendarOptions = {
 		initialView: 'dayGridWeek',
 		plugins: [timegridPlugin, daygridPlugin, interactionPlugin],
-		events: [{ title: 'event 1', date: '2023-10-31' }],
 		headerToolbar: {
 			left: 'title',
 			right: 'prev,today,next dayGridWeek,dayGridDay'
@@ -36,4 +35,8 @@
 	};
 </script>
 
-<FullCalendar {options} />
+<div
+	class="bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700 overflow-hidden"
+>
+	<FullCalendar {options} />
+</div>
