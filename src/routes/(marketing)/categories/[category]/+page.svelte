@@ -17,7 +17,7 @@
 		<!-- Card -->
 		<a
 			class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-			href="#"
+			href="cat/123"
 		>
 			<div class="aspect-video w-full relative overflow-hidden">
 				<img
@@ -46,7 +46,7 @@
 		<!-- Card -->
 		<a
 			class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-			href="#"
+			href="cat/123"
 		>
 			<div class="aspect-video w-full relative overflow-hidden">
 				<img
@@ -75,7 +75,7 @@
 		<!-- Card -->
 		<a
 			class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-			href="#"
+			href="cat/324"
 		>
 			<div class="aspect-video w-full relative overflow-hidden">
 				<img
@@ -104,7 +104,7 @@
 		<!-- Card -->
 		<a
 			class="group flex flex-col bg-white border shadow-sm rounded-xl hover:shadow-md transition dark:bg-slate-900 dark:border-gray-800"
-			href="#"
+			href="qe/ewr"
 		>
 			<div class="aspect-video w-full relative overflow-hidden">
 				<img

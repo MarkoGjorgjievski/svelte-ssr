@@ -1,6 +1,6 @@
 <!-- Nav -->
 <nav
-	class="sticky -top-px bg-white text-sm font-medium text-black ring-1 ring-gray-900 ring-opacity-5 border-t shadow-sm shadow-gray-100 pt-6 md:pb-6 z-20 -mt-px dark:bg-slate-900 dark:border-gray-800 dark:shadow-slate-700/[.7] scrollbar-hidden"
+	class="sticky -top-px bg-white text-sm font-medium text-gray-800 ring-1 ring-gray-900 ring-opacity-5 border-t shadow-sm shadow-gray-100 pt-6 md:pb-6 z-20 -mt-px dark:bg-slate-900 dark:border-gray-800 dark:shadow-slate-700/[.7] scrollbar-hidden"
 	aria-label="Jump links"
 >
 	<div
@@ -42,10 +42,6 @@
 				href="#"
 			>
 				Documentation
-				<span
-					class="inline bg-gray-100 text-xs text-gray-500 font-semibold rounded-full py-1 px-2 dark:bg-gray-700 dark:text-gray-400"
-					>v12.7</span
-				>
 			</a>
 		</div>
 	</div>

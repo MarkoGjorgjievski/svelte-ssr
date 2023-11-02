@@ -5,7 +5,7 @@
 	import IconSection from '$lib/templates/sections/icons/IconSection.svelte';
 	import CallToActionSection from '$lib/templates/sections/main/CallToActionSection.svelte';
 	import SectionNavbar from '$lib/templates/sections/navbar/SectionNavbar.svelte';
-	import PricingSection from '$lib/templates/sections/pricing/PricingSection.svelte';
+	import PricingSection from '$lib/pages/pricing/PricingSection.svelte';
 	import ClientQuotes from '$lib/templates/sections/testemonials/ClientQuotes.svelte';
 	import ClientsSection from '$lib/templates/sections/testemonials/ClientsSection.svelte';
 </script>

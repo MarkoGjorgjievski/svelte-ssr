@@ -1,5 +1,5 @@
 <script>
-	import PricingSection from '$lib/templates/sections/pricing/PricingSection.svelte';
+	import PricingSection from '$lib/pages/pricing/PricingSection.svelte';
 </script>
 
 <PricingSection />
