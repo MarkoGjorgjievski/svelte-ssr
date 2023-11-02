@@ -3,7 +3,7 @@
 		<!-- Grid -->
 		<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
 			<div class="col-span-full lg:col-span-1">
-				<a class="flex-none text-xl font-semibold text-white" href="#" aria-label="Brand">Brand</a>
+				<a class="flex-none text-xl font-semibold text-white" href="#" aria-label="Brand">Taman</a>
 			</div>
 			<!-- End Col -->
 

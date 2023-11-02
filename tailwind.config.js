@@ -43,6 +43,10 @@ export default {
       screens: {
         'md': '768px',
       },
+      fontSize: {
+        '7xl': '4.5rem',
+        '9xl': '8rem',
+      },
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],
