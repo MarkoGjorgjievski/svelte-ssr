@@ -188,9 +188,13 @@
     }
 
     .neutral {
-      @apply bg-base hover:text-neutral-content border shadow-sm text-neutral-content border-base-200;
+      @apply hover:text-neutral-content border shadow-sm text-neutral-content border-base-200;
     }
   }
+}
+
+hr {
+  @apply border-gray-200 dark:border-gray-700;
 }
 
 body:has(.side-panel) {

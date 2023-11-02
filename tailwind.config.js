@@ -40,6 +40,9 @@ export default {
       borderColor: {
         border: "rgb(var(--base-200) / <alpha-value>)",
       },
+      screens: {
+        'md': '768px',
+      },
     },
     fontFamily: {
       sans: ["Inter", "sans-serif"],

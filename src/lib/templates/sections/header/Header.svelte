@@ -3,7 +3,7 @@
 </script>
 
 <header
-	class="flex flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-white border-b border-gray-200 text-sm py-2 sm:pb-0 dark:bg-gray-800 dark:border-gray-700"
+	class="relative flex flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-transparent border-b border-gray-200 text-sm py-2 sm:pb-0 dark:bg-gray-800 dark:border-gray-700"
 >
 	<nav
 		class="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
@@ -79,7 +79,7 @@
 				>
 				<a
 					class="py-2 px-3 inline-flex justify-center items-center gap-2 rounded-md border-2 border-gray-200 font-semibold text-blue-600 hover:bg-blue-50 hover:border-blue-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:hover:bg-blue-600/[.3] dark:border-slate-700 dark:hover:border-blue-500 dark:hover:text-blue-500"
-					href="/register">Try for free</a
+					href="/business">Try for free</a
 				>
 			</div>
 		</div>
