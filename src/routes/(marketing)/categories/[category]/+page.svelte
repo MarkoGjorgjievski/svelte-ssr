@@ -1,5 +1,6 @@
 <script>
 	import FilterDropdown from '$lib/templates/molecules/to-be-decided/FilterDropdown.svelte';
+	import RatingStars from '$lib/templates/molecules/to-be-decided/RatingStars.svelte';
 </script>
 
 <!-- Card Blog -->
@@ -25,13 +26,19 @@
 					alt="Image Description"
 				/>
 			</div>
-			<div class="p-4 md:p-5">
-				<p class="mt-2 text-xs uppercase text-gray-600 dark:text-gray-400">Product</p>
-				<h3
-					class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white"
-				>
-					Better is when everything works together
-				</h3>
+			<div class="p-4 pb-3 space-y-3">
+				<div class=" flex justify-between items-center">
+					<RatingStars />
+					<!-- <p class="text-xs uppercase text-gray-600 dark:text-gray-400">Category</p> -->
+				</div>
+				<div class="truncate h-6">
+					<h3
+						class="text-lg leading-6 font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white"
+					>
+						Better is What CFR really is about
+					</h3>
+				</div>
+				<p class="text-xs text-gray-600 dark:text-gray-400">Done Bozinov, Kumanovo</p>
 			</div>
 		</a>
 		<!-- End Card -->
@@ -48,13 +55,19 @@
 					alt="Image Description"
 				/>
 			</div>
-			<div class="p-4 md:p-5">
-				<p class="mt-2 text-xs uppercase text-gray-600 dark:text-gray-400">Business</p>
-				<h3
-					class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white"
-				>
-					What CFR really is about
-				</h3>
+			<div class="p-4 pb-3 space-y-3">
+				<div class=" flex justify-between items-center">
+					<!-- <p class="text-xs uppercase text-gray-600 dark:text-gray-400">Category</p> -->
+					<RatingStars />
+				</div>
+				<div class="truncate h-6">
+					<h3
+						class="text-lg leading-6 font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white"
+					>
+						Better is What CFR really is about
+					</h3>
+				</div>
+				<p class="text-xs text-gray-600 dark:text-gray-400">Done Bozinov, Kumanovo</p>
 			</div>
 		</a>
 		<!-- End Card -->
@@ -71,13 +84,19 @@
 					alt="Image Description"
 				/>
 			</div>
-			<div class="p-4 md:p-5">
-				<p class="mt-2 text-xs uppercase text-gray-600 dark:text-gray-400">Business</p>
-				<h3
-					class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white"
-				>
-					Should Product Owners think like entrepreneurs?
-				</h3>
+			<div class="p-4 pb-3 space-y-3">
+				<div class=" flex justify-between items-center">
+					<!-- <p class="text-xs uppercase text-gray-600 dark:text-gray-400">Category</p> -->
+					<RatingStars />
+				</div>
+				<div class="truncate h-6">
+					<h3
+						class="text-lg leading-6 font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white"
+					>
+						Better is What CFR really is about
+					</h3>
+				</div>
+				<p class="text-xs text-gray-600 dark:text-gray-400">Done Bozinov, Kumanovo</p>
 			</div>
 		</a>
 		<!-- End Card -->
@@ -94,13 +113,19 @@
 					alt="Image Description"
 				/>
 			</div>
-			<div class="p-4 md:p-5">
-				<p class="mt-2 text-xs uppercase text-gray-600 dark:text-gray-400">Facilitate</p>
-				<h3
-					class="mt-2 text-lg font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white"
-				>
-					Announcing Front Strategies: Ready-to-use rules
-				</h3>
+			<div class="p-4 pb-3 space-y-3">
+				<div class=" flex justify-between items-center">
+					<!-- <p class="text-xs uppercase text-gray-600 dark:text-gray-400">Category</p> -->
+					<RatingStars />
+				</div>
+				<div class="truncate h-6">
+					<h3
+						class="text-lg leading-6 font-medium text-gray-800 group-hover:text-blue-600 dark:text-gray-300 dark:group-hover:text-white"
+					>
+						Better is What CFR really is about
+					</h3>
+				</div>
+				<p class="text-xs text-gray-600 dark:text-gray-400">Done Bozinov, Kumanovo</p>
 			</div>
 		</a>
 		<!-- End Card -->

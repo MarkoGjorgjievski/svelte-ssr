@@ -1,6 +1,6 @@
 <!-- Nav -->
 <nav
-	class="relative bg-white text-sm font-normal text-gray-700 pt-2.5 md:pb-2.5 z-10 -mt-px dark:bg-slate-900 dark:shadow-slate-700/[.7] scrollbar-hidden"
+	class="relative bg-white text-sm font-normal text-gray-700 pt-2.5 md:pb-2.5 z-10 -mt-px ring-1 ring-gray-900 ring-opacity-5 dark:bg-slate-900 dark:shadow-slate-700/[.7] scrollbar-hidden"
 	aria-label="Jump links"
 >
 	<div
