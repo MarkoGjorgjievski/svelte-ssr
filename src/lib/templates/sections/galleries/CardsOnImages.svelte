@@ -1,5 +1,5 @@
 <!-- Masonry Cards -->
-<div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+<div class="max-w-[85rem] px-4 py-4 sm:px-6 lg:px-8 lg:py-8 mx-auto">
 	<!-- Grid -->
 
 	<div class="grid grid-cols-2 md:grid-cols-4 gap-4">

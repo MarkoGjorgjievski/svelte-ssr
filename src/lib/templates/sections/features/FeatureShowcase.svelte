@@ -208,7 +208,7 @@
 					<div class="bg-gray-800 rounded-b-lg">
 						<img
 							class="max-w-full h-auto rounded-b-lg"
-							src="../assets/img/mockups/img10.jpg"
+							src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 							alt="Image Description"
 						/>
 					</div>
@@ -235,7 +235,7 @@
 					>
 						<img
 							class="max-w-full h-auto rounded-[1.25rem]"
-							src="../assets/img/mockups/img13.jpg"
+							src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 							alt="Image Description"
 						/>
 					</div>
@@ -264,7 +264,7 @@
 					<div class="bg-gray-800 rounded-b-lg">
 						<img
 							class="max-w-full h-auto rounded-b-lg"
-							src="../assets/img/mockups/img12.jpg"
+							src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 							alt="Image Description"
 						/>
 					</div>
