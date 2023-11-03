@@ -1,8 +1,8 @@
 <script>
-	import DatePickerBase from './DatePickerBase.svelte';
+	import DatePickerBase, { iso } from './DatePickerBase.svelte';
 
-	let startDate = '2022-03-01';
-	let endDate = '2022-03-03';
+	let startDate = iso(new Date());
+	// let endDate = '2022-03-03';
 
 	const locale = {
 		en: {
@@ -20,8 +20,6 @@
 	let culture = 'en';
 </script>
 
-<h1>DatePicker</h1>
-
 <!-- <label>
 	Culture:
 	<select bind:value={culture}>
@@ -31,9 +29,20 @@
 	</select>
 </label> -->
 
-<h3>Start Date</h3>
-<input type="text" bind:value={startDate} />
-<DatePickerBase bind:value={startDate} {...locale[culture]} />
+<div class="space-y-2 w-fit">
+	<label for="datepicker" class="block font-medium text-gray-800 dark:text-gray-200 mb-2"
+		>Select date</label
+	>
+
+	<input
+		id="datepicker"
+		type="text"
+		class="py-3 px-4 block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400"
+		bind:value={startDate}
+	/>
+
+	<DatePickerBase bind:value={startDate} {...locale[culture]} />
+</div>
 
 <!-- <h3>End Date</h3>
 <input type="text" bind:value={endDate} />

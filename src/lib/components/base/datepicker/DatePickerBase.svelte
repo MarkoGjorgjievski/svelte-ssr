@@ -1,3 +1,6 @@
+<!-- DatePicker REPL. Keep it -->
+<!-- https://svelte.dev/repl/f391b3186f804fb0bb0931e73388553a?version=3.46.4 -->
+
 <script context="module">
 	export function iso(date) {
 		const pad = (n) => (n < 10 ? '0' + n : n);
@@ -74,7 +77,12 @@
 				value,
 				class: [
 					date === value ? 'selected' : '',
-					mm == M ? '' : (mm > M ? yy >= Y : yy > Y) ? 'future' : 'past'
+					mm == M ? '' : (mm > M ? yy >= Y : yy > Y) ? 'future' : 'past',
+					dd == new Date().getDate() &&
+					mm == new Date().getMonth() &&
+					yy == new Date().getFullYear()
+						? 'today'
+						: ''
 				].join(' ')
 			});
 
@@ -90,57 +98,44 @@
 	}
 </script>
 
-<div class="bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 w-fit p-4">
-	<table
-		class="divide-y divide-gray-200 dark:divide-gray-700 dark:bg-slate-800 text-gray-800 dark:text-gray-100"
-	>
-		<tr>
-			<td class="btn" on:click={() => go(-1)}>&#9664;</td>
-			<td colspan="5">{month} {year}</td>
-			<td class="btn" on:click={() => go(+1)}>&#9654;</td>
-		</tr>
-		<tr>
+<div
+	class="bg-white border shadow-sm rounded-xl dark:bg-slate-800 text-gray-800 dark:text-gray-100 dark:border-gray-700 w-fit select-none"
+>
+	<div class="divide-y divide-gray-200 dark:divide-gray-700">
+		<div class="flex justify-between py-3 px-3">
+			<button class="btn" on:click={() => go(-1)}><i class="bi bi-chevron-left" /></button>
+			<button>{month} {year}</button>
+			<button class="btn" on:click={() => go(+1)}><i class="bi bi-chevron-right" /></button>
+		</div>
+		<div class="py-1 px-3 flex justify-between bg-gray-50 dark:bg-slate-800">
 			{#each days as day}
 				<th class="text-xs font-semibold uppercase tracking-wide text-gray-800 dark:text-gray-200"
 					>{day}</th
 				>
 			{/each}
-		</tr>
+		</div>
 		{#each weeks as week}
-			<tr>
+			<div class="flex justify-between py-1 px-3 last:hidden">
 				{#each week as day}
-					<td class="btn {day.class}" on:click={() => selectDate(day.value)}>{day.date}</td>
+					<button
+						class="btn {day.class} font-normal h-[2.375rem] w-[2.375rem] rounded-full hover:bg-gray-100 dark:hover:bg-slate-700 transition-all duration-100"
+						on:click={() => selectDate(day.value)}>{day.date}</button
+					>
 				{/each}
-			</tr>
+			</div>
 		{/each}
-	</table>
+	</div>
 </div>
 
 <style>
-	td,
-	th {
-		width: 28px;
-		text-align: center;
-		border-radius: 4px;
-		line-height: 24px;
-		margin: 0;
-		padding: 0;
-	}
-	td.past,
-	td.future {
+	button.past,
+	button.future {
 		opacity: 0.5;
 	}
-	.btn {
-		cursor: pointer;
+	button.selected {
+		@apply font-semibold text-white bg-blue-600;
 	}
-	.btn:hover {
-		background: gray;
-		color: white;
-	}
-	td.selected {
-		color: #ffffff;
-		font-weight: bold;
-		background-color: #006dcc;
-		border-color: #002a80;
+	button.today {
+		@apply border border-blue-600;
 	}
 </style>

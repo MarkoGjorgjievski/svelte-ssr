@@ -15,12 +15,19 @@
 	</div>
 </header>
 <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-8 h-full">
-	<div class="w-full flex flex-col md:flex-row">
+	<div class="w-full flex flex-col md:flex-row md:divide-x lg:divide-x">
 		<div class="w-full">
+			<span class="block font-medium text-gray-800 dark:text-gray-200 mb-2"
+				>Select staff member</span
+			>
+
 			<SelectStaffCards />
 		</div>
-		<div class="w-full">
+		<div class="w-full flex justify-center">
 			<DatePicker />
+		</div>
+		<div class="w-full">
+			<span class="block font-medium text-gray-800 dark:text-gray-200 mb-2">Select slot</span>
 		</div>
 	</div>
 	<!-- <a
