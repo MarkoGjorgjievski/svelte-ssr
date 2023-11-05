@@ -1,3 +1,7 @@
+<script>
+	export let label = 'Day';
+</script>
+
 <div
 	class="hs-accordion bg-white border -mt-px first:rounded-t-lg last:rounded-b-lg dark:bg-gray-800 dark:border-gray-700"
 	id="hs-basic-always-open-heading-one"
@@ -12,7 +16,7 @@
 			/>
 			<label
 				for="hs-basic-with-description-checked"
-				class="text-sm text-gray-500 ml-3 dark:text-gray-400">Monday</label
+				class="text-sm text-gray-500 ml-3 dark:text-gray-400">{label}</label
 			>
 		</div>
 

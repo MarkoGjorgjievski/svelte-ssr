@@ -11,6 +11,9 @@
 			<!-- Grid -->
 			<div class="space-y-4 sm:space-y-6">
 				<div class="hs-accordion-group" data-hs-accordion-always-open>
+					<WorkingHoursDayItem label="All" />
+				</div>
+				<div class="hs-accordion-group" data-hs-accordion-always-open>
 					<WorkingHoursDayItem />
 					<WorkingHoursDayItem />
 					<WorkingHoursDayItem />

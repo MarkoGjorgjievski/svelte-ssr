@@ -1,9 +1,11 @@
 <script>
 	import TableFooter from './TableFooter.svelte';
 	import TableHeader from './TableHeader.svelte';
+
+	export let title = 'Title';
 </script>
 
-<div class="max-w-[85rem] py-6 mx-auto">
+<div class="max-w-[85rem] mx-auto">
 	<!-- Card -->
 	<div class="flex flex-col">
 		<div class="-m-1.5 overflow-x-auto">
@@ -12,7 +14,7 @@
 					class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden dark:bg-slate-900 dark:border-gray-700"
 				>
 					<!-- Header -->
-					<TableHeader />
+					<TableHeader {title} />
 					<!-- End Header -->
 
 					<!-- Table -->
