@@ -37,7 +37,7 @@
 	</div>
 </div>
 
-<div class="mt-6">
+<div class="py-6">
 	<div
 		id="tabs-with-underline-{activeTab}"
 		role="tabpanel"

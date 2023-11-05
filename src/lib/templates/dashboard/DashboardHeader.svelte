@@ -2,6 +2,7 @@
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import IconButton from '$lib/components/base/button/IconButton.svelte';
 	import DashboardHeaderDropdown from './DashboardHeaderDropdown.svelte';
+	import NotificationDropdown from './notifications/NotificationDropdown.svelte';
 </script>
 
 <header
@@ -44,9 +45,7 @@
 			<div class="flex flex-row items-center justify-end gap-2">
 				<ThemeSwitcher />
 
-				<IconButton>
-					<i class="bi bi-bell" />
-				</IconButton>
+				<NotificationDropdown />
 
 				<DashboardHeaderDropdown />
 			</div>

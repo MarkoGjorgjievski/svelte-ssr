@@ -1,11 +1,10 @@
 <script>
-	import FileInput from '$lib/components/forms/FileInput.svelte';
 	import AccountGallery from '$lib/templates/sections/galleries/AccountGallery.svelte';
 </script>
 
-<div class="grid grid-cols-3">
+<div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-4">
 	<div class="col-span-1">Whateva</div>
-	<div class="col-span-2">
+	<div class="md:col-span-2">
 		<div
 			class="bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700"
 		>
