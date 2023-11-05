@@ -8,12 +8,10 @@
 	export let as = '';
 	export let title = '';
 
-	export let isOpen = false;
-
 	$: isOpen = $page.url.search.includes(`dialog=${as}`);
 
 	const closeSidePanel = () => {
-		// remove any unwanted queries after dialog closes, can use props for logic
+		// remove any unwanted queries after dialog closes
 		const newUrl = replaceQuery({ dialog: null, event: null });
 		newUrl && goto(newUrl);
 		isOpen = false;
