@@ -1,5 +1,7 @@
 <script>
 	import RatingStars from '$lib/templates/molecules/to-be-decided/RatingStars.svelte';
+	import ReviewContent from '$lib/templates/sections/reviews/ReviewContent.svelte';
+	import ReviewsByCategory from '$lib/templates/sections/reviews/ReviewsByCategory.svelte';
 	import ListingServiceItem from './ListingServiceItem.svelte';
 </script>
 
@@ -16,7 +18,7 @@
 						</h2>
 
 						<div class="flex justify-between items-center">
-							<div class="flex items-center gap-x-5">
+							<div class="flex items-center gap-2 lg:gap-5 flex-wrap">
 								<RatingStars />
 								<p class="text-xs sm:text-sm text-gray-800 dark:text-gray-200">
 									Done Bozinov, 24, Kumanovo, Macedonia
@@ -298,6 +300,9 @@
 							<!-- End Col -->
 						</div>
 					</div>
+					<hr />
+					<ReviewsByCategory />
+					<ReviewContent />
 				</div>
 			</div>
 		</div>
@@ -305,7 +310,8 @@
 
 		<!-- Sidebar -->
 		<div
-			class="lg:col-span-1 lg:w-full lg:h-full lg:bg-gradient-to-r lg:from-gray-50 lg:via-transparent lg:to-transparent dark:from-slate-800"
+			id="service-list"
+			class="lg:col-span-1 lg:w-full lg:h-full lg:bg-gradient-to-r lg:from-gray-50 lg:via-transparent lg:to-transparent dark:from-slate-800 scroll-mt-12"
 		>
 			<div class="sticky top-20 left-0 py-8 lg:pl-4 lg:pl-8">
 				<h3 class="text-2xl font-semibold dark:text-white">Book a service</h3>
@@ -327,3 +333,13 @@
 	</div>
 </div>
 <!-- End Blog Article -->
+
+<a
+	href="#service-list"
+	class="sticky bottom-0 lg:hidden inset-x-0 flex items-center justify-center z-50 w-full border-t border-gray-200 text-sm py-0 bg-white/[.6] backdrop-blur-lg dark:bg-slate-900/[.6]"
+>
+	<div class="relative max-w-[85rem] w-full mx-auto px-4 py-2 text-center" aria-label="Global">
+		See all services
+		<i class="bi bi-arrow-down" />
+	</div>
+</a>

@@ -1,7 +1,7 @@
 <script>
 	import DatePicker from '$lib/components/base/datepicker/DatePicker.svelte';
-	import SelectSlots from '$lib/pages/checkout/SelectSlots.svelte';
-	import SelectStaff from '$lib/pages/checkout/SelectStaff.svelte';
+	import SelectSlots from '$lib/pages/confirmation/SelectSlots.svelte';
+	import SelectStaff from '$lib/pages/confirmation/SelectStaff.svelte';
 	import ListingServiceItem from '$lib/pages/listing/ListingServiceItem.svelte';
 	import SelectStaffCards from '$lib/templates/forms/staff/SelectStaffCards.svelte';
 </script>

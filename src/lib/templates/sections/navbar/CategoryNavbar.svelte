@@ -9,31 +9,31 @@
 		<div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last-pr-0">
 			<a
 				class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500"
-				href="#">Dashboard</a
+				href="#">Hair Salon</a
 			>
 		</div>
 		<div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last:pr-0">
 			<a
 				class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500"
-				href="#">Users</a
+				href="#">Make up</a
 			>
 		</div>
 		<div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last:pr-0">
 			<a
 				class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500"
-				href="#">Account</a
+				href="#">Manicure</a
 			>
 		</div>
 		<div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last:pr-0">
 			<a
 				class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500"
-				href="#">Projects</a
+				href="#">Beauty salon</a
 			>
 		</div>
 		<div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last:pr-0">
 			<a
 				class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500"
-				href="#">Calendar</a
+				href="#">Massage</a
 			>
 		</div>
 		<div class="snap-center shrink-0 pr-5 sm:pr-8 sm:last:pr-0">
@@ -41,7 +41,7 @@
 				class="inline-flex items-center gap-x-2 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500"
 				href="#"
 			>
-				Documentation
+				Tattoo
 			</a>
 		</div>
 	</div>
