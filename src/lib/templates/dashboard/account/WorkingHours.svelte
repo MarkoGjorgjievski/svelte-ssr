@@ -1,5 +1,5 @@
 <script>
-	import WorkingHoursForm from '../../../../../lib/templates/forms/account/working-hours/WorkingHoursForm.svelte';
+	import WorkingHoursForm from '$lib/templates/forms/account/working-hours/WorkingHoursForm.svelte';
 </script>
 
 <div class="grid grid-cols-3">

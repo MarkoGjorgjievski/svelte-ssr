@@ -14,7 +14,7 @@
 
 	const closeSidePanel = () => {
 		const newUrl = replaceQuery({ dialog: null });
-		goto(newUrl);
+		newUrl && goto(newUrl);
 		isOpen = false;
 	};
 

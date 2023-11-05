@@ -7,7 +7,7 @@
 	const routes = [
 		{ label: 'Dashboard', icon: 'house', slug: baseUrl },
 		{ label: 'Calendar', icon: 'calendar-week', slug: `${baseUrl}/calendar` },
-		{ label: 'Account', icon: 'person-vcard', slug: `${baseUrl}/account/general` },
+		{ label: 'Account', icon: 'person-vcard', slug: `${baseUrl}/account`, query: '?tab=general' },
 		{ label: 'Staff', icon: 'people', slug: `${baseUrl}/staff` },
 		{ label: 'Analytics', icon: 'bar-chart', slug: `${baseUrl}/analytics` },
 		{ label: 'Clients', icon: 'stars', slug: `${baseUrl}/clients` }
@@ -25,13 +25,14 @@
 
 	<nav class="hs-accordion-group p-6 w-full flex flex-col flex-wrap" data-hs-accordion-always-open>
 		<ul class="space-y-1.5">
-			{#each routes as { label, icon, slug }}
+			{#each routes as { label, icon, slug, query }}
 				<li>
 					<AccordionSidebarItem
 						{label}
 						icon="bi bi-{icon}"
 						{slug}
 						active={$page.url.pathname === slug}
+						{query}
 					/>
 				</li>
 			{/each}
