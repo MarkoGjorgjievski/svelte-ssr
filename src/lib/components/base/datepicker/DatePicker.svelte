@@ -29,10 +29,10 @@
 	</select>
 </label> -->
 
-<div class="space-y-2 w-fit">
-	<label for="datepicker" class="block font-medium text-gray-800 dark:text-gray-200 mb-2"
+<div class="space-y-2 w-full max-w-sm">
+	<!-- <label for="datepicker" class="block font-medium text-gray-800 dark:text-gray-200 mb-2"
 		>Select date</label
-	>
+	> -->
 
 	<input
 		id="datepicker"

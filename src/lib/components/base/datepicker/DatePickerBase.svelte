@@ -99,7 +99,7 @@
 </script>
 
 <div
-	class="bg-white border shadow-sm rounded-xl dark:bg-slate-800 text-gray-800 dark:text-gray-100 dark:border-gray-700 w-fit select-none"
+	class="bg-white border shadow-sm rounded-xl dark:bg-slate-800 text-gray-800 dark:text-gray-100 dark:border-gray-700 w-full max-w-sm min-w-[350px] select-none"
 >
 	<div class="divide-y divide-gray-200 dark:divide-gray-700">
 		<div class="flex justify-between py-3 px-3">
