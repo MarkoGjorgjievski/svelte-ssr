@@ -1,25 +1,25 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	import { fade, fly } from 'svelte/transition';
 	import { clickOutside } from '../../../helpers/clickOutside';
-	import { replaceQuery } from '../../../helpers/replaceQuery';
 	import { goto } from '$app/navigation';
 
 	export let as = '';
 	export let title = '';
 
-	$: isOpen = $page.url.search.includes(`dialog=${as}`);
+	$: isOpen = $page.url.searchParams.get('dialog') === as;
 
-	const closeSidePanel = () => {
-		// remove any unwanted queries after dialog closes
-		const newUrl = replaceQuery({ dialog: null, event: null });
-		newUrl && goto(newUrl);
+	const closeSidePanel: () => void = () => {
+		$page.url.searchParams.delete('dialog');
+		// maybe we want to delete any selected event for which the dialog was open (check notification dropdown)
+		$page.url.searchParams.delete('event');
+		goto($page.url.href);
 		isOpen = false;
 	};
 
 	const handleClickOutside = () => closeSidePanel();
 
-	const handleKeydown = (event) => {
+	const handleKeydown = (event: KeyboardEvent) => {
 		event.key === 'Escape' && closeSidePanel();
 	};
 </script>

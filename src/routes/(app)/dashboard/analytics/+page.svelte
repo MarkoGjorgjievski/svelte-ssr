@@ -1,5 +1,5 @@
 <script>
-	import AnalyticsComingSoon from '$lib/templates/dashboard/analytics/AnalyticsComingSoon.svelte';
+	import AnalyticsComingSoon from '$lib/views/dashboard/analytics/AnalyticsComingSoon.svelte';
 </script>
 
 <div class="relative">

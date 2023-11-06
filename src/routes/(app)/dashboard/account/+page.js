@@ -1,7 +1,7 @@
-import General from "$lib/templates/dashboard/account/General.svelte";
-import ImageGallery from "$lib/templates/dashboard/account/ImageGallery.svelte";
-import Services from "$lib/templates/dashboard/account/Services.svelte";
-import WorkingHours from "$lib/templates/dashboard/account/WorkingHours.svelte";
+import General from "$lib/views/dashboard/account/General.svelte";
+import ImageGallery from "$lib/views/dashboard/account/ImageGallery.svelte";
+import Services from "$lib/views/dashboard/account/Services.svelte";
+import WorkingHours from "$lib/views/dashboard/account/WorkingHours.svelte";
 
 export function load() {
     const tabs = [

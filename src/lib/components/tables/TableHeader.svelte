@@ -1,5 +1,6 @@
-<script>
-	export let title = 'Title';
+<script lang="ts">
+	export let title: string = 'Title';
+	export let subtitle: string = 'Title';
 </script>
 
 <div
@@ -9,7 +10,7 @@
 		<h2 class="text-xl font-semibold text-gray-800 dark:text-gray-200">
 			{title}
 		</h2>
-		<p class="text-sm text-gray-600 dark:text-gray-400">Add users, edit and more.</p>
+		<p class="text-sm text-gray-600 dark:text-gray-400">{subtitle}</p>
 	</div>
 
 	<div>

@@ -1,5 +1,5 @@
 <script>
-	import Dashboard from '$lib/templates/dashboard/Dashboard.svelte';
+	import Dashboard from '$lib/views/dashboard/Dashboard.svelte';
 </script>
 
 <Dashboard>
