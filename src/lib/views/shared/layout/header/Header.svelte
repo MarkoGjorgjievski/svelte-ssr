@@ -1,5 +1,6 @@
 <script>
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
+	import CommandPallete from '$lib/templates/overlays/modals/CommandPallete.svelte';
 </script>
 
 <header
@@ -13,6 +14,23 @@
 			<a class="flex-none text-xl font-semibold dark:text-white" href="/" aria-label="Brand"
 				>Taman</a
 			>
+			<div class="hidden sm:block pl-6">
+				<label for="icon" class="sr-only">Search</label>
+				<div class="relative">
+					<div
+						class="absolute inset-y-0 left-0 flex items-center pointer-events-none z-20 pl-4 text-neutral-content"
+					>
+						<i class="bi bi-search" />
+					</div>
+					<input
+						type="text"
+						id="icon"
+						name="icon"
+						class="py-2 px-4 pl-11 outline-none block w-full border-base-200 shadow-sm rounded-md text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 border"
+						placeholder="Search"
+					/>
+				</div>
+			</div>
 			<div class="sm:hidden">
 				<button
 					type="button"
@@ -47,6 +65,7 @@
 				</button>
 			</div>
 		</div>
+
 		<div
 			id="navbar-collapse-with-animation"
 			class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
@@ -85,6 +104,8 @@
 		</div>
 	</nav>
 </header>
+
+<CommandPallete />
 
 <style>
 	:global(body):has(.category-navbar) .main-header {

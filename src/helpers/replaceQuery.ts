@@ -16,3 +16,12 @@ export const replaceQuery = (values: Record<string, string | null>) => {
     }
     return ''
 };
+
+export const setQuery = (key: string, value:string) => {
+    if (browser) {
+        get(page).url.searchParams.set(encodeURIComponent(key), encodeURIComponent(value));
+        
+        return get(page).url.href
+    }
+    return ''
+};

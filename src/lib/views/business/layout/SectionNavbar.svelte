@@ -1,8 +1,8 @@
 <header
-	class="sticky top-0 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full bg-white border-b border-gray-200 text-sm py-0 dark:bg-gray-800 dark:border-gray-700"
+	class="sticky top-14 inset-x-0 flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full border-gray-200 text-sm py-0 dark:bg-gray-800 dark:border-gray-700 bg-white/[.6] backdrop-blur-lg dark:bg-slate-900/[.6]"
 >
 	<nav
-		class="relative max-w-7xl w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 sm:py-0 md:py-2 lg:py-2"
+		class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 sm:py-0 md:py-2 lg:py-2"
 		aria-label="Global"
 	>
 		<div

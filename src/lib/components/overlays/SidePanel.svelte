@@ -31,9 +31,7 @@
 		transition:fly|global={{ x: 100, duration: 400 }}
 		use:clickOutside
 		on:click_outside={handleClickOutside}
-		class="side-panel fixed top-0 right-0 transition-all duration-300 transform h-full max-w-xs w-full z-[62] bg-white border-l dark:bg-gray-800 dark:border-gray-700 {isOpen
-			? 'open'
-			: 'hidden'}"
+		class="side-panel fixed top-0 right-0 transition-all duration-300 transform h-full max-w-xs w-full z-[62] bg-white border-l dark:bg-gray-800 dark:border-gray-700"
 		tabindex="-1"
 	>
 		<div class="flex justify-between items-center py-3 px-4 border-b dark:border-gray-700">

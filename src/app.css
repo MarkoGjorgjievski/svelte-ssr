@@ -197,7 +197,7 @@ hr {
   @apply border-gray-200 dark:border-gray-700;
 }
 
-body:has(.side-panel) {
+body:has(.side-panel), body:has(.modal) {
   overflow-y: hidden;
 }
 
