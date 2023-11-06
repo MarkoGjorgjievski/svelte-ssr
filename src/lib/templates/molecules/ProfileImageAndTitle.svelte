@@ -1,5 +1,5 @@
 <script>
-	import ImageHeaderSection from '../sections/galleries/ImageHeaderSection.svelte';
+	import ImageHeaderSection from '$lib/views/shared/sections/galleries/ImageHeaderSection.svelte';
 </script>
 
 <ImageHeaderSection />

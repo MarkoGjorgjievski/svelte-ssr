@@ -16,20 +16,3 @@ export const replaceQuery = (values: Record<string, string | null>) => {
     }
     return ''
 };
-
-export const findQuery = (value: string) => {
-    if (browser) {
-        const url = new URL(window.location.toString());
-        return url.searchParams.get(value)
-    }
-}
-
-export const appendQuery = (param: string, value:string) => {
-    const url = new URL(window.location.toString());
-    url.searchParams.append(param, value);
-    
-    return url
-};
-
-// TODO: change location
-export const openDialog = (value: string) => appendQuery('dialog', value).href

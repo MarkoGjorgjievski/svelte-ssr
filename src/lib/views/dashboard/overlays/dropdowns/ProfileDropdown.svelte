@@ -1,5 +1,5 @@
 <script>
-	import Avatar from '../../components/base/avatar/Avatar.svelte';
+	import Avatar from '../../../../components/base/avatar/Avatar.svelte';
 </script>
 
 <div class="hs-dropdown relative inline-flex [--placement:bottom-right]">

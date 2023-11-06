@@ -1,6 +1,6 @@
 <script>
 	import { page } from '$app/stores';
-	import Header from '$lib/templates/sections/header/Header.svelte';
+	import Header from '$lib/views/shared/layout/header/Header.svelte';
 </script>
 
 <Header />

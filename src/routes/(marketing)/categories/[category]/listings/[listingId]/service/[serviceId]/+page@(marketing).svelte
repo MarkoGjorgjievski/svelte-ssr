@@ -1,9 +1,8 @@
 <script>
 	import DatePicker from '$lib/components/base/datepicker/DatePicker.svelte';
-	import SelectSlots from '$lib/pages/confirmation/SelectSlots.svelte';
-	import SelectStaff from '$lib/pages/confirmation/SelectStaff.svelte';
-	import ListingServiceItem from '$lib/pages/listing/ListingServiceItem.svelte';
-	import SelectStaffCards from '$lib/templates/forms/staff/SelectStaffCards.svelte';
+	import SelectSlots from '$lib/views/confirmation/sections/SelectSlots.svelte';
+	import SelectStaff from '$lib/views/confirmation/sections/SelectStaff.svelte';
+	import ListingServiceItem from '$lib/views/listing/ListingServiceItem.svelte';
 </script>
 
 <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-8 h-full">

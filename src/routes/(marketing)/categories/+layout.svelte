@@ -1,6 +1,6 @@
 <script>
-	import CategoryNavbar from '$lib/templates/sections/navbar/CategoryNavbar.svelte';
-	import CityNavbar from '$lib/templates/sections/navbar/CityNavbar.svelte';
+	import CategoryNavbar from '$lib/views/category/layout/navbar/CategoryNavbar.svelte';
+	import CityNavbar from '$lib/views/category/layout/navbar/CityNavbar.svelte';
 </script>
 
 <CategoryNavbar />

@@ -1,5 +1,5 @@
 <script>
-	import SignIn from '$lib/templates/forms/auth/SignIn.svelte';
+	import SignInForm from '$lib/templates/forms/auth/SignInForm.svelte';
 </script>
 
-<SignIn />
+<SignInForm />

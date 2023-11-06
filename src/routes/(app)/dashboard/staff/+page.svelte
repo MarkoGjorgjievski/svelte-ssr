@@ -1,5 +1,5 @@
 <script>
-	import Table from '$lib/components/tables/Table.svelte';
+	import StaffSection from '$lib/views/dashboard/sections/staff/StaffSection.svelte';
 </script>
 
-<Table />
+<StaffSection />

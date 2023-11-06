@@ -1,6 +1,6 @@
 <!-- Nav -->
 <nav
-	class="sticky -top-px bg-white text-sm font-medium text-gray-800 ring-1 ring-gray-900 ring-opacity-5 border-t shadow-sm shadow-gray-100 pt-6 md:pb-6 z-20 -mt-px dark:bg-slate-900 dark:border-gray-800 dark:shadow-slate-700/[.7] scrollbar-hidden"
+	class="category-navbar sticky -top-px bg-white text-sm font-medium text-gray-800 ring-1 ring-gray-900 ring-opacity-5 border-t shadow-sm shadow-gray-100 pt-6 md:pb-6 z-20 -mt-px dark:bg-slate-900 dark:border-gray-800 dark:shadow-slate-700/[.7] scrollbar-hidden"
 	aria-label="Jump links"
 >
 	<div

@@ -1,9 +1,9 @@
 <script>
-	import AnalyticsSection from '$lib/views/dashboard/sections/analytics/AnalyticsSection.svelte';
+	import Table from '$lib/components/tables/Table.svelte';
 </script>
 
 <div class="relative">
-	<AnalyticsSection />
+	<Table />
 	<div class="fixed top-0 h-full w-full backdrop-filter backdrop-blur bg-white/10" />
 
 	<div class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2">

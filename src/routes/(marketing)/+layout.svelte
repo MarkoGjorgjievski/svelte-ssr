@@ -1,6 +1,6 @@
 <script>
-	import Header from '$lib/templates/sections/header/Header.svelte';
-	import Footer from '$lib/templates/sections/footer/Footer.svelte';
+	import Header from '$lib/views/shared/layout/header/Header.svelte';
+	import Footer from '$lib/views/shared/layout/footer/Footer.svelte';
 </script>
 
 <Header />

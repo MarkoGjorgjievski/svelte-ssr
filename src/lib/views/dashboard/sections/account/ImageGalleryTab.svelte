@@ -1,5 +1,5 @@
 <script>
-	import AccountGallery from '$lib/templates/sections/galleries/AccountGallery.svelte';
+	import AccountGallery from '$lib/views/shared/sections/galleries/AccountGallery.svelte';
 </script>
 
 <div class="grid sm:grid-cols-1 lg:grid-cols-3 gap-4">

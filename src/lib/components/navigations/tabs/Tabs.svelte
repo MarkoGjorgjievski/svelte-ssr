@@ -1,35 +1,32 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { type SvelteComponent } from 'svelte';
-	import { findQuery, replaceQuery } from '../../../../helpers/replaceQuery';
+	// @ts-ignore
+	import { type ComponentType } from 'svelte';
+	import { replaceQuery } from '../../../../helpers/replaceQuery';
 
-	type Tab = { slug: string; label: string; component: SvelteComponent };
+	type Tab = { query: string; label: string; component: ComponentType };
 
 	export let tabs: Tab[] = [];
 
 	let tabsObj: Record<string, Tab> = tabs.reduce(
-		(obj, item) => Object.assign(obj, { [item.slug]: { ...item } }),
+		(obj, item) => Object.assign(obj, { [item.query]: { ...item } }),
 		{}
 	);
 
-	$: activeTab = findQuery('tab');
-
-	$: {
-		$page.url.searchParams, (activeTab = findQuery('tab'));
-	}
+	$: activeTab = $page.url.searchParams.get('tab');
 </script>
 
 <div class="border-b border-base-200">
 	<div class="flex space-x-2" aria-label="Tabs" role="tablist">
 		{#each tabs as tab}
 			<a
-				class:active={$page.url.search.includes(`tab=${tab.slug}`)}
+				class:active={activeTab === tab.query}
 				class="py-4 px-1 inline-flex items-center gap-2 border-b-[3px] text-sm whitespace-nowrap border-transparent text-gray-500 hover:text-primary"
-				id="tabs-with-underline-item-{tab.slug}"
-				aria-controls="tabs-with-underline-{tab.slug}"
-				data-hs-tab="#tabs-with-underline-{tab.slug}"
+				id="tabs-with-underline-item-{tab.query}"
+				aria-controls="tabs-with-underline-{tab.query}"
+				data-hs-tab="#tabs-with-underline-{tab.query}"
 				role="tab"
-				href={replaceQuery({ tab: tab.slug })}
+				href={replaceQuery({ tab: tab.query })}
 			>
 				{tab.label}
 			</a>

@@ -1,7 +1,7 @@
 <script>
 	import RatingStars from '$lib/templates/molecules/to-be-decided/RatingStars.svelte';
-	import ReviewContent from '$lib/templates/sections/reviews/ReviewContent.svelte';
-	import ReviewsByCategory from '$lib/templates/sections/reviews/ReviewsByCategory.svelte';
+	import ReviewContent from '$lib/views/listing/sections/reviews/ReviewContent.svelte';
+	import ReviewsByCategory from '$lib/views/listing/sections/reviews/ReviewsByCategory.svelte';
 	import ListingServiceItem from './ListingServiceItem.svelte';
 </script>
 

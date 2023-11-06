@@ -1,5 +1,5 @@
 <script>
-	import ListingDetailsPage from '$lib/pages/listing/ListingDetailsPage.svelte';
+	import ListingDetailsPage from '$lib/views/listing/ListingDetailsPage.svelte';
 </script>
 
 <ListingDetailsPage />

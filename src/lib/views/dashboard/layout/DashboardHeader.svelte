@@ -1,8 +1,8 @@
 <script>
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import IconButton from '$lib/components/base/button/IconButton.svelte';
-	import DashboardHeaderDropdown from './DashboardHeaderDropdown.svelte';
-	import NotificationDropdown from './notifications/NotificationDropdown.svelte';
+	import ProfileDropdown from '../overlays/dropdowns/ProfileDropdown.svelte';
+	import NotificationDropdown from '../overlays/dropdowns/NotificationDropdown.svelte';
 </script>
 
 <header
@@ -47,7 +47,7 @@
 
 				<NotificationDropdown />
 
-				<DashboardHeaderDropdown />
+				<ProfileDropdown />
 			</div>
 		</div>
 	</nav>

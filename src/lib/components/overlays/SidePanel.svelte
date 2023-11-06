@@ -11,8 +11,8 @@
 
 	const closeSidePanel: () => void = () => {
 		$page.url.searchParams.delete('dialog');
-		// maybe we want to delete any selected event for which the dialog was open (check notification dropdown)
-		$page.url.searchParams.delete('event');
+		// in case we want to delete any selected event for which the dialog was open (check notification dropdown)
+		// $page.url.searchParams.delete('event');
 		goto($page.url.href);
 		isOpen = false;
 	};
@@ -28,7 +28,7 @@
 
 {#if isOpen}
 	<div
-		transition:fly|global={{ x: 100, duration: 300 }}
+		transition:fly|global={{ x: 100, duration: 400 }}
 		use:clickOutside
 		on:click_outside={handleClickOutside}
 		class="side-panel fixed top-0 right-0 transition-all duration-300 transform h-full max-w-xs w-full z-[62] bg-white border-l dark:bg-gray-800 dark:border-gray-700 {isOpen
@@ -65,7 +65,7 @@
 	</div>
 
 	<div
-		transition:fade|global={{ duration: 100 }}
+		transition:fade|global={{ duration: 200 }}
 		class="fixed inset-0 z-[61] bg-gray-900 bg-opacity-50 dark:bg-opacity-80 pointer-events-hidden"
 	/>
 {/if}

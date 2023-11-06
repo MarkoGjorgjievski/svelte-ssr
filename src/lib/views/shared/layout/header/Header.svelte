@@ -3,7 +3,7 @@
 </script>
 
 <header
-	class="relative flex flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-transparent border-b border-gray-200 text-sm py-2 sm:pb-0 dark:bg-gray-800 dark:border-gray-700"
+	class="main-header sticky top-0 flex flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-white border-b border-gray-200 text-sm py-2 sm:pb-0 dark:bg-gray-800 dark:border-gray-700"
 >
 	<nav
 		class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
@@ -85,3 +85,9 @@
 		</div>
 	</nav>
 </header>
+
+<style>
+	:global(body):has(.category-navbar) .main-header {
+		position: relative;
+	}
+</style>

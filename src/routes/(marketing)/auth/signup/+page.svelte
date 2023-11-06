@@ -1,5 +1,5 @@
 <script>
-	import SignUp from '$lib/templates/forms/auth/SignUp.svelte';
+	import SignUpForm from '$lib/templates/forms/auth/SignUpForm.svelte';
 </script>
 
-<SignUp />
+<SignUpForm />

@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import Avatar from '$lib/components/base/avatar/Avatar.svelte';
 	import SidePanel from '$lib/components/overlays/SidePanel.svelte';
-	import Calendar from '$lib/views/dashboard/calendar/Calendar.svelte';
+	import CalendarSection from '$lib/views/dashboard/sections/calendar/CalendarSection.svelte';
 	import EditEvent from '$lib/templates/forms/events/EditEvent.svelte';
 	import { replaceQuery } from '../../../../helpers/replaceQuery';
 </script>
@@ -19,7 +19,6 @@
 	<SidePanel as="confirm" title="Confirm">
 		<EditEvent />
 
-		<a class="btn primary solid rounded" href={replaceQuery({ event: '123123' })}>event id</a>
 		CONFIRM
 	</SidePanel>
 
@@ -27,5 +26,5 @@
 		<Avatar />
 		Adding
 	</SidePanel>
-	<Calendar />
+	<CalendarSection />
 </div>

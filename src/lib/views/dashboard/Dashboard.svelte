@@ -1,7 +1,7 @@
 <script>
-	import DashboardHeader from './DashboardHeader.svelte';
-	import DashboardSidebar from './DashboardSidebar.svelte';
-	import DashboardSidebarToggle from './DashboardSidebarToggle.svelte';
+	import DashboardHeader from './layout/DashboardHeader.svelte';
+	import DashboardSidebar from './layout/DashboardSidebar.svelte';
+	import DashboardSidebarToggle from './layout/DashboardSidebarToggle.svelte';
 </script>
 
 <svelte:head>

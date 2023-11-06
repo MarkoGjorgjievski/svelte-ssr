@@ -1,14 +1,14 @@
-import General from "$lib/views/dashboard/account/General.svelte";
-import ImageGallery from "$lib/views/dashboard/account/ImageGallery.svelte";
-import Services from "$lib/views/dashboard/account/Services.svelte";
-import WorkingHours from "$lib/views/dashboard/account/WorkingHours.svelte";
+import GeneralTab from "$lib/views/dashboard/sections/account/GeneralTab.svelte";
+import ImageGalleryTab from "$lib/views/dashboard/sections/account/ImageGalleryTab.svelte";
+import ServicesTab from "$lib/views/dashboard/sections/account/ServicesTab.svelte";
+import WorkingHoursTab from "$lib/views/dashboard/sections/account/WorkingHoursTab.svelte";
 
 export function load() {
     const tabs = [
-		{ slug: 'general', label: 'General', component: General },
-		{ slug: 'services', label: 'Services', component: Services },
-		{ slug: 'working-hours', label: 'Working hours', component: WorkingHours },
-		{ slug: 'image-gallery', label: 'Image gallery', component: ImageGallery },
+		{ query: 'general', label: 'General', component: GeneralTab },
+		{ query: 'services', label: 'Services', component: ServicesTab },
+		{ query: 'working-hours', label: 'Working hours', component: WorkingHoursTab },
+		{ query: 'image-gallery', label: 'Image gallery', component: ImageGalleryTab },
 	];
 
     return { tabs }

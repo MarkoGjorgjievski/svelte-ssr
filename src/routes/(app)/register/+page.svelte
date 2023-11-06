@@ -1,7 +1,7 @@
 <script>
 	import RegisterForm from '$lib/templates/forms/register/RegisterForm.svelte';
-	import Header from '$lib/templates/sections/header/Header.svelte';
-	import JoinUsSection from '$lib/templates/sections/hero/JoinUsSection.svelte';
+	import Header from '$lib/views/shared/layout/header/Header.svelte';
+	import JoinUsSection from '$lib/views/register/sections/hero/JoinUsSection.svelte';
 </script>
 
 <Header />

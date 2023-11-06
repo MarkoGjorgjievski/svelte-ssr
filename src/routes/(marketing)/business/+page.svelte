@@ -1,22 +1,21 @@
 <script>
-	import Faq from '$lib/templates/sections/faq/FAQ.svelte';
-	import FeatureShowcase from '$lib/templates/sections/features/FeatureShowcase.svelte';
-	import MarketingHeroSection from '$lib/templates/sections/hero/MarketingHeroSection.svelte';
-	import IconSection from '$lib/templates/sections/icons/IconSection.svelte';
-	import CallToActionSection from '$lib/templates/sections/main/CallToActionSection.svelte';
-	import SectionNavbar from '$lib/templates/sections/navbar/SectionNavbar.svelte';
-	import PricingSection from '$lib/pages/pricing/PricingSection.svelte';
-	import ClientQuotes from '$lib/templates/sections/testemonials/ClientQuotes.svelte';
-	import ClientsSection from '$lib/templates/sections/testemonials/ClientsSection.svelte';
+	import SectionNavbar from '$lib/views/business/layout/SectionNavbar.svelte';
+	import CallToActionSection from '$lib/views/shared/sections/main/CallToActionSection.svelte';
+	import Faq from '$lib/views/business/sections/faq/FAQ.svelte';
+	import FeatureShowcaseSection from '$lib/views/business/sections/features/FeatureShowcaseSection.svelte';
+	import MarketingHeroSection from '$lib/views/business/sections/hero/MarketingHeroSection.svelte';
+	import IconSection from '$lib/views/business/sections/icons/IconSection.svelte';
+	import ClientsLogoSection from '$lib/views/business/sections/testemonials/ClientsLogoSection.svelte';
+	import ClientQuoteSection from '$lib/views/business/sections/testemonials/ClientQuoteSection.svelte';
 </script>
 
 <SectionNavbar />
 <MarketingHeroSection />
-<ClientsSection />
-<FeatureShowcase />
+<ClientsLogoSection />
+<FeatureShowcaseSection />
 <IconSection />
 <hr />
-<ClientQuotes />
+<ClientQuoteSection />
 <hr />
 <Faq />
 <CallToActionSection />
