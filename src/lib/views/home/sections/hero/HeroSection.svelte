@@ -1,5 +1,5 @@
 <script>
-	import { replaceQuery } from '../../../../../helpers/replaceQuery';
+	import { replaceQuery } from '$lib/helpers/replaceQuery';
 </script>
 
 <!-- Hero -->

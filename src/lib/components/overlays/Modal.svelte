@@ -1,7 +1,7 @@
 <!-- <script lang="ts">
 	import { page } from '$app/stores';
 	import { fade, fly, scale } from 'svelte/transition';
-	import { clickOutside } from '../../../helpers/clickOutside';
+	import { clickOutside } from '$lib/helpers/clickOutside';
 	import { goto } from '$app/navigation';
 
 	// DOESNT WORK

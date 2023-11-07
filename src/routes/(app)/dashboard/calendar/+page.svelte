@@ -4,7 +4,7 @@
 	import SidePanel from '$lib/components/overlays/SidePanel.svelte';
 	import CalendarSection from '$lib/views/dashboard/sections/calendar/CalendarSection.svelte';
 	import EditEvent from '$lib/templates/forms/events/EditEvent.svelte';
-	import { replaceQuery } from '../../../../helpers/replaceQuery';
+	import { replaceQuery } from '$lib/helpers/replaceQuery';
 </script>
 
 <div class="pt-8 pb-4">
