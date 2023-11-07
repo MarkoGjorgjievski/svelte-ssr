@@ -7,14 +7,16 @@
 	class="main-header sticky top-0 flex flex-wrap sm:justify-start sm:flex-col z-50 w-full bg-white border-b border-gray-200 text-sm py-2 sm:pb-0 dark:bg-gray-800 dark:border-gray-700"
 >
 	<nav
-		class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8"
+		class="relative max-w-[85rem] w-full mx-auto px-4 sm:flex sm:justify-between sm:px-6 lg:px-8"
 		aria-label="Global"
 	>
-		<div class="flex items-center justify-between">
-			<a class="flex-none text-xl font-semibold dark:text-white" href="/" aria-label="Brand"
-				>Taman</a
+		<div class="flex items-center h-fit justify-between">
+			<a
+				class="flex-none h-fit self-center text-xl font-semibold dark:text-white"
+				href="/"
+				aria-label="Brand">Taman</a
 			>
-			<div class="hidden sm:block pl-6">
+			<div class="hidden sm:block pl-6 h-fit">
 				<label for="icon" class="sr-only">Search</label>
 				<div class="relative">
 					<div
@@ -68,7 +70,7 @@
 
 		<div
 			id="navbar-collapse-with-animation"
-			class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block"
+			class="hs-collapse hidden transition-all duration-300 basis-full grow sm:block"
 		>
 			<div
 				class="flex flex-col gap-y-4 gap-x-0 sm:flex-row sm:items-center sm:justify-end sm:gap-y-0 sm:gap-x-7 sm:pl-7 pb-2"

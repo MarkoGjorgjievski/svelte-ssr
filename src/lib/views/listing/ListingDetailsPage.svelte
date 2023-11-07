@@ -311,7 +311,7 @@
 		<!-- Sidebar -->
 		<div
 			id="service-list"
-			class="lg:col-span-1 lg:w-full lg:h-full lg:bg-gradient-to-r lg:from-gray-50 lg:via-transparent lg:to-transparent dark:from-slate-800 scroll-mt-12"
+			class="lg:col-span-1 lg:w-full lg:h-full lg:bg-gradient-to-r lg:from-gray-100 lg:via-transparent lg:to-transparent dark:from-slate-800 scroll-mt-12"
 		>
 			<div class="sticky top-20 left-0 py-8 lg:pl-4 lg:pl-8">
 				<h3 class="text-2xl font-semibold dark:text-white">Book a service</h3>

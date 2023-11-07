@@ -1,10 +1,10 @@
 <script>
-	import RegisterForm from '$lib/templates/forms/register/RegisterForm.svelte';
+	import RegisterFirstForm from '$lib/templates/forms/register/RegisterFirstForm.svelte';
 	import Header from '$lib/views/shared/layout/header/Header.svelte';
-	import JoinUsSection from '$lib/views/register/sections/hero/JoinUsSection.svelte';
+	import SharedHeroSection from '$lib/views/shared/sections/hero/SharedHeroSection.svelte';
 </script>
 
 <Header />
-<JoinUsSection>
-	<RegisterForm />
-</JoinUsSection>
+<SharedHeroSection blockquote>
+	<RegisterFirstForm />
+</SharedHeroSection>
