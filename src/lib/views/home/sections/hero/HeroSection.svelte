@@ -1,7 +1,3 @@
-<script>
-	import { replaceQuery } from '$lib/helpers/replaceQuery';
-</script>
-
 <!-- Hero -->
 <div class="overflow-hidden">
 	<div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-20">
