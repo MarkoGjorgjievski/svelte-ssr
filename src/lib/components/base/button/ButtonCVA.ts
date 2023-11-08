@@ -275,32 +275,32 @@ export const buttonVariants = cva(
 			{
 				variant: 'white',
 				intent: 'dark',
-				class: ['text-gray-800', 'dark:text-white']
+				class: ['font-medium text-gray-800', 'dark:text-white']
 			},
 			{
 				variant: 'white',
 				intent: 'dim',
-				class: ['text-gray-500', 'dark:text-gray-400']
+				class: ['font-medium text-gray-500', 'dark:text-gray-400']
 			},
 			{
 				variant: 'white',
 				intent: 'success',
-				class: ['text-teal-500', 'dark:hover:bg-gray-800']
+				class: ['font-medium text-teal-500', 'dark:hover:bg-gray-800']
 			},
 			{
 				variant: 'white',
 				intent: 'primary',
-				class: ['text-blue-600', 'dark:text-blue-500']
+				class: ['font-medium text-blue-600', 'dark:text-blue-500']
 			},
 			{
 				variant: 'white',
 				intent: 'warning',
-				class: ['text-yellow-500', 'dark:text-blue-500 dark:hover:text-blue-400']
+				class: ['font-medium text-yellow-500', 'dark:text-blue-500 dark:hover:text-blue-400']
 			},
 			{
 				variant: 'white',
 				intent: 'danger',
-				class: 'text-red-500'
+				class: 'font-medium text-red-500'
 			}
 		],
 		defaultVariants: {

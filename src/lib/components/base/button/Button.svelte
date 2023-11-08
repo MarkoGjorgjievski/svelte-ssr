@@ -22,8 +22,8 @@
 	type="button"
 	{...$$restProps}
 >
-	{#if loading}
+	<!-- {#if loading}
 		<Loader />
-	{/if}
+	{/if} -->
 	<slot />
 </button>
