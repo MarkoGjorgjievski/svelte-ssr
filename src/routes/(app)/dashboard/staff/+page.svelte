@@ -4,6 +4,12 @@
 </script>
 
 <div class="p-4">
-	<Input placeholder="Write something.." floating label="asmdlmsd" helperText="Helper text" />
+	<Input
+		placeholder="Write something.."
+		floating
+		label="asmdlmsd"
+		helperText="Helper text"
+		intent="danger"
+	/>
 </div>
 <StaffSection />

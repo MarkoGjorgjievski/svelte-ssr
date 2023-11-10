@@ -12,6 +12,11 @@
 	export let size: 'small' | 'default' | 'large' = 'default';
 	export let intent: 'default' | 'success' | 'danger' = 'default';
 	export let helperText: string = '';
+
+	const alertIcons = new Map([
+		['success', 'bi bi-check-circle-fill'],
+		['danger', 'bi bi-exclamation-octagon-fill']
+	]);
 </script>
 
 {#if floating}
@@ -22,6 +27,11 @@
 			{placeholder}
 			class={cn(inputVariants({ size, variant, intent, floating }))}
 		/>
+		{#if intent !== 'default'}
+			<div class="absolute h-14 inset-y-0 end-0 flex items-center pointer-events-none pe-3">
+				<i class="flex-shrink-0 {intent} {alertIcons.get(intent)}" />
+			</div>
+		{/if}
 		<Label variant={floating ? 'floating' : 'default'} {size}>{label}</Label>
 		{#if helperText}<p class="text-sm mt-2 helper-text {intent}" {id}>
 				{helperText}
@@ -29,20 +39,32 @@
 	</div>
 {:else}
 	{#if label}<Label variant={floating ? 'floating' : 'default'} {size}>{label}</Label>{/if}
-	<input {type} {id} {placeholder} class={cn(inputVariants({ size, variant, intent, floating }))} />
-	{#if helperText}<p class="text-sm mt-2 helper-text {intent}" {id}>
+	<div class="relative">
+		<input
+			{type}
+			{id}
+			{placeholder}
+			class={cn(inputVariants({ size, variant, intent, floating }))}
+		/>
+	</div>
+	{#if intent !== 'default'}
+		<div class="absolute h-14 inset-y-0 end-0 flex items-center pointer-events-none pe-3">
+			<i class="flex-shrink-0 {intent} {alertIcons.get(intent)}" />
+		</div>
+	{/if}
+	{#if helperText}<p class="text-sm mt-2 {intent}" {id}>
 			{helperText}
 		</p>{/if}
 {/if}
 
 <style>
-	.helper-text.danger {
+	.danger {
 		@apply text-red-500;
 	}
-	.helper-text.success {
+	.success {
 		@apply text-teal-500;
 	}
-	.helper-text.default {
+	.default {
 		@apply text-gray-500;
 	}
 </style>
