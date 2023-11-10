@@ -1,14 +1,4 @@
-export type Size = "small" | "medium" | "large";
-export type State = "solid" | "soft";
-export type Width = "shrink" | "full" | "";
-export type Variant =
-  | "primary"
-  | "info"
-  | "success"
-  | "warning"
-  | "danger"
-  | "inverted"
-  | "off-base"
-  | "grouped"
-  | "base-color"
-  | "neutral";
+export type Size = 'small' | 'default' | 'large';
+export type Intent = 'primary' | 'success' | 'warning' | 'danger' | 'dark' | 'dim' | 'light';
+
+export type Variant = 'solid' | 'soft' | 'outlined' | 'ghost' | 'white' | 'link';
