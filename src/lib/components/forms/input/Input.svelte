@@ -12,6 +12,8 @@
 	export let size: 'small' | 'default' | 'large' = 'default';
 	export let intent: 'default' | 'success' | 'danger' = 'default';
 	export let helperText: string = '';
+	export let required: boolean = false;
+	export let disabled: boolean = false;
 
 	const alertIcons = new Map([
 		['success', 'bi bi-check-circle-fill'],
@@ -25,7 +27,11 @@
 			{type}
 			{id}
 			{placeholder}
-			class={cn(inputVariants({ size, variant, intent, floating }))}
+			{required}
+			{disabled}
+			aria-relevant="text"
+			aria-disabled={disabled}
+			class={cn(inputVariants({ size, variant, intent, floating, disabled }))}
 		/>
 		{#if intent !== 'default'}
 			<div class="absolute h-14 inset-y-0 end-0 flex items-center pointer-events-none pe-3">
@@ -44,7 +50,9 @@
 			{type}
 			{id}
 			{placeholder}
-			class={cn(inputVariants({ size, variant, intent, floating }))}
+			{disabled}
+			{required}
+			class={cn(inputVariants({ size, variant, intent, floating, disabled }))}
 		/>
 	</div>
 	{#if intent !== 'default'}

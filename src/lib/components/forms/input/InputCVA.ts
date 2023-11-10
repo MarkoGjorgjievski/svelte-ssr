@@ -8,6 +8,7 @@ export const inputVariants = cva('block w-full text-sm', {
 				'border border-gray-200',
 				'focus:border-blue-500 focus:ring-blue-500 outline-blue-500 dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600'
 			],
+			// not done
 			underline: [
 				'peer',
 				'bg-transparent border-t-transparent border-b-2 border-x-transparent border-b-gray-200 text-sm focus:border-t-transparent focus:border-x-transparent focus:border-b-blue-500 focus:ring-0',
