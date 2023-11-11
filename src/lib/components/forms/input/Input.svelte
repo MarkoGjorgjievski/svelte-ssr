@@ -10,25 +10,34 @@
 	export let variant: 'bordered' | 'underline' = 'bordered';
 	export let floating: boolean = true;
 	export let size: 'small' | 'default' | 'large' = 'default';
-	export let intent: 'default' | 'success' | 'danger' = 'default';
-	export let helperText: string = '';
+	export let helperText: string | unknown = '';
 	export let required: boolean = false;
 	export let disabled: boolean = false;
+	export let value: string | unknown = '';
+	export let errorMessage: string | unknown = '';
+	export let intent: 'default' | 'success' | 'danger' = 'default';
+	export let name: string = '';
 
 	const alertIcons = new Map([
 		['success', 'bi bi-check-circle-fill'],
 		['danger', 'bi bi-exclamation-octagon-fill']
 	]);
+
+	const typeAction = (node: HTMLInputElement) => {
+		node.type = type;
+	};
 </script>
 
 {#if floating}
 	<div class="relative">
 		<input
-			{type}
+			use:typeAction
 			{id}
+			{name}
 			{placeholder}
 			{required}
 			{disabled}
+			bind:value
 			aria-relevant="text"
 			aria-disabled={disabled}
 			class={cn(inputVariants({ size, variant, intent, floating, disabled }))}
@@ -39,19 +48,23 @@
 			</div>
 		{/if}
 		<Label {label} variant={floating ? 'floating' : 'default'} {size} />
-		{#if helperText}<p class="text-sm mt-2 helper-text {intent}" {id}>
-				{helperText}
+		{#if errorMessage || helperText}<p class="text-sm mt-2 helper-text {intent}">
+				{errorMessage || helperText}
 			</p>{/if}
 	</div>
 {:else}
 	{#if label}<Label {label} variant={floating ? 'floating' : 'default'} {size} />{/if}
 	<div class="relative">
 		<input
-			{type}
+			use:typeAction
 			{id}
+			{name}
 			{placeholder}
-			{disabled}
 			{required}
+			{disabled}
+			bind:value
+			aria-relevant="text"
+			aria-disabled={disabled}
 			class={cn(inputVariants({ size, variant, intent, floating, disabled }))}
 		/>
 	</div>
@@ -60,7 +73,7 @@
 			<i class="flex-shrink-0 {intent} {alertIcons.get(intent)}" />
 		</div>
 	{/if}
-	{#if helperText}<p class="text-sm mt-2 {intent}" {id}>
+	{#if helperText}<p class="text-sm mt-2 {intent}">
 			{helperText}
 		</p>{/if}
 {/if}
