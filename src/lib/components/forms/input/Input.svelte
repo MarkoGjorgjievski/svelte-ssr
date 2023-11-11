@@ -78,7 +78,7 @@
 		</p>{/if}
 {/if}
 
-<style>
+<style lang="postcss">
 	.danger {
 		@apply text-red-500;
 	}
