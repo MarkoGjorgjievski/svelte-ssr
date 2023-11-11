@@ -8,7 +8,7 @@
 	export let id: string = '';
 	export let type: 'text' | 'email' | 'password' = 'text';
 	export let variant: 'bordered' | 'underline' = 'bordered';
-	export let floating: boolean = false;
+	export let floating: boolean = true;
 	export let size: 'small' | 'default' | 'large' = 'default';
 	export let intent: 'default' | 'success' | 'danger' = 'default';
 	export let helperText: string = '';
@@ -38,13 +38,13 @@
 				<i class="flex-shrink-0 {intent} {alertIcons.get(intent)}" />
 			</div>
 		{/if}
-		<Label variant={floating ? 'floating' : 'default'} {size}>{label}</Label>
+		<Label {label} variant={floating ? 'floating' : 'default'} {size} />
 		{#if helperText}<p class="text-sm mt-2 helper-text {intent}" {id}>
 				{helperText}
 			</p>{/if}
 	</div>
 {:else}
-	{#if label}<Label variant={floating ? 'floating' : 'default'} {size}>{label}</Label>{/if}
+	{#if label}<Label {label} variant={floating ? 'floating' : 'default'} {size} />{/if}
 	<div class="relative">
 		<input
 			{type}

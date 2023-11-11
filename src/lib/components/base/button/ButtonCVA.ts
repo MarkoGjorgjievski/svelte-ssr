@@ -36,7 +36,7 @@ export const buttonVariants = cva(
 				rounded: 'rounded-lg'
 			},
 			width: {
-				block: 'w-full',
+				block: 'w-full justify-center items-center',
 				shrink: 'flex flex-shrink-0'
 			},
 			trailingDivider: {

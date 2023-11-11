@@ -13,13 +13,14 @@
 	export let shape: 'pill' | 'rounded' = 'rounded';
 	export let trailingDivider: boolean = false;
 	export let intent: Intent = 'dark';
+	export let type: 'button' | 'submit' = 'button';
 </script>
 
 <button
 	on:click
 	class={cn(buttonVariants({ size, variant, intent, width, shape, disabled, trailingDivider }))}
 	{disabled}
-	type="button"
+	{type}
 	{...$$restProps}
 >
 	{#if loading}
