@@ -5,9 +5,10 @@
 
 	export let data;
 
-	$: console.log(data);
+	$: console.log('profile data', data);
 
-	const { form, errors, enhance } = superForm(data.form, {
+	const { form, errors, enhance } = superForm(data.profileForm, {
+		id: 'profile',
 		validators: profileSchema
 	});
 </script>

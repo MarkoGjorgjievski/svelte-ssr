@@ -1,14 +1,19 @@
 /** @type {import('./$types').PageLoad} */
-import { accountSchema } from '$lib/templates/forms/register/AccountSchema.js';
-import { profileSchema } from '$lib/templates/forms/register/ProfileSchema.js';
-import { registerSchema } from '$lib/templates/forms/register/RegisterSchema';
+import { accountSchema } from '$lib/templates/forms/register/AccountSchema';
+import { profileSchema } from '$lib/templates/forms/register/ProfileSchema';
 import { fail, redirect } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/client';
 
 export const load = async () => {
-	const form = await superValidate(registerSchema);
+	const profileForm = await superValidate(profileSchema, { id: 'profile' });
+	const accountForm = await superValidate(accountSchema, { id: 'account' });
 
-	return { form };
+	return {
+		forms: {
+			profile: profileForm,
+			account: accountForm
+		}
+	};
 };
 
 export const actions = {

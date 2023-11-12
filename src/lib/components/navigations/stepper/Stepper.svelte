@@ -4,7 +4,7 @@
 
 	export let data;
 
-	const { steps, form } = data;
+	const { steps, forms } = data;
 
 	$: console.log($page.params.step);
 </script>
@@ -140,11 +140,11 @@
 				<div class="mt-5 sm:mt-8">
 					<!-- First Content -->
 					{#each steps as step}
-						<div class:hidden={$page.params.step !== step.slug}>
+						{#if $page.params.step === step.slug}
 							<div class="bg-gray-50 rounded-xl dark:bg-gray-800">
-								<svelte:component this={step.component} data={{ form }} />
+								<svelte:component this={step.component} data={forms[step.slug]} />
 							</div>
-						</div>
+						{/if}
 					{/each}
 					<!-- End First Content -->
 
@@ -156,7 +156,7 @@
 							intent="primary"
 							variant="solid"
 							type="submit"
-							form="profile"
+							form={$page.params.step}
 							formaction="?/{$page.params.step}">Next<i class="bi bi-chevron-right" /></Button
 						>
 					</div>
