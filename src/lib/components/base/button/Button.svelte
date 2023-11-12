@@ -1,5 +1,4 @@
 <script lang="ts">
-	import './Button.css';
 	import Loader from '../loader/Loader.svelte';
 	import { buttonVariants } from './ButtonCVA';
 	import type { Intent, Size, Variant } from '../../types';

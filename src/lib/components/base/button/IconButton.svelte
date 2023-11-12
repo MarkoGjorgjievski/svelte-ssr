@@ -3,12 +3,10 @@
 	import Button from './Button.svelte';
 
 	export let size: Size = 'small';
-	export let variant: Variant | 'transparent' = 'transparent';
+	export let variant: Variant = 'ghost';
 	export let rounded: 'full' | 'medium' = 'full';
 </script>
 
 <Button {size} {variant} {rounded} width="shrink">
-	<span slot="iconStart">
-		<slot />
-	</span>
+	<slot />
 </Button>

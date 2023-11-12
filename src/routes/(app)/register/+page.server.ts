@@ -19,6 +19,6 @@ export const actions = {
 			});
 		}
 
-		throw redirect(303, '/register/steps/profile');
+		throw redirect(303, '/register/?step=profile');
 	}
 };

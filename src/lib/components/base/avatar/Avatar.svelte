@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { twMerge } from 'tailwind-merge';
 	import type { Size } from '../../types';
 
@@ -39,4 +39,4 @@
 	.active {
 		@apply ring-primary;
 	}
-</style>
+</style> -->
