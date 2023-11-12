@@ -3,7 +3,7 @@
 	import Label from '../label/Label.svelte';
 	import { inputVariants } from './InputCVA';
 
-	export let label: string = 'Label';
+	export let label: string = '';
 	export let placeholder: string = '';
 	export let id: string = '';
 	export let type: 'text' | 'email' | 'password' = 'text';
@@ -29,7 +29,7 @@
 </script>
 
 {#if floating}
-	<div class="relative">
+	<div class="relative w-full">
 		<input
 			use:typeAction
 			{id}
@@ -40,7 +40,7 @@
 			bind:value
 			aria-relevant="text"
 			aria-disabled={disabled}
-			class={cn(inputVariants({ size, variant, intent, floating, disabled }))}
+			class={cn(inputVariants({ size, variant, intent, floating, disabled }), $$props.class)}
 		/>
 		{#if intent !== 'default'}
 			<div class="absolute h-14 inset-y-0 end-0 flex items-center pointer-events-none pe-3">
@@ -54,7 +54,7 @@
 	</div>
 {:else}
 	{#if label}<Label {label} variant={floating ? 'floating' : 'default'} {size} />{/if}
-	<div class="relative">
+	<div class="relative w-full">
 		<input
 			use:typeAction
 			{id}
@@ -65,17 +65,17 @@
 			bind:value
 			aria-relevant="text"
 			aria-disabled={disabled}
-			class={cn(inputVariants({ size, variant, intent, floating, disabled }))}
+			class={cn(inputVariants({ size, variant, intent, floating, disabled }), $$props.class)}
 		/>
+		{#if intent !== 'default'}
+			<div class="absolute h-12 inset-y-0 end-0 flex items-center pointer-events-none pe-3">
+				<i class="flex-shrink-0 {intent} {alertIcons.get(intent)}" />
+			</div>
+		{/if}
+		{#if errorMessage || helperText}<p class="text-sm mt-2 {intent}">
+				{errorMessage || helperText}
+			</p>{/if}
 	</div>
-	{#if intent !== 'default'}
-		<div class="absolute h-14 inset-y-0 end-0 flex items-center pointer-events-none pe-3">
-			<i class="flex-shrink-0 {intent} {alertIcons.get(intent)}" />
-		</div>
-	{/if}
-	{#if helperText}<p class="text-sm mt-2 {intent}">
-			{helperText}
-		</p>{/if}
 {/if}
 
 <style lang="postcss">

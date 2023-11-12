@@ -1,12 +1,30 @@
-<script lang="ts">
+<script>
+	/*
+	The Stepper component is designed to receive a data prop [along with an additional props] containing form IDs from multiple forms. The structure of the data prop is as follows:
+
+	`data={{ [step.slug]: forms[step.slug] }}`
+
+	Here, `step.slug` is used as a dynamic key to associate the form data with its corresponding ID.
+
+	Example:
+
+	`data={{
+		profile: formData1,
+		account: formData2,
+	}}`
+
+	In order to submit the form from outside, the **Button** component needs to have these two props:
+		- `form={_form_id}` - to submit the corresponding form from outside;
+		- `formaction="?/{_form_action_name}` - to idenitify the corresponding action (in +page.server.ts);
+*/
+
 	import { page } from '$app/stores';
 	import Button from '$lib/components/base/button/Button.svelte';
+	import { cn } from '$lib/helpers/classValue';
 
 	export let data;
 
 	const { steps, forms } = data;
-
-	$: console.log($page.params.step);
 </script>
 
 <!-- Stepper -->
@@ -32,106 +50,28 @@
 			<div>
 				<!-- Stepper Nav -->
 				<ul class="relative flex flex-row gap-x-2">
-					<!-- Item -->
-					<li class="flex items-center gap-x-2 shrink basis-0 flex-1 group active">
-						<span
-							class="min-w-[28px] min-h-[28px] group inline-flex items-center text-xs align-middle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
-						>
+					{#each steps as step, index}
+						<!-- Item -->
+						<li class="flex items-center gap-x-2 shrink basis-0 flex-1 group active">
 							<span
-								class="w-7 h-7 flex justify-center items-center flex-shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 dark:bg-gray-700 dark:text-white dark:group-focus:bg-gray-600 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
+								class="min-w-[28px] min-h-[28px] group inline-flex items-center text-xs align-middle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
 							>
-								<span class="hs-stepper-success:hidden hs-stepper-completed:hidden">1</span>
-								<svg
-									class="hidden flex-shrink-0 h-3 w-3 hs-stepper-success:block"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="3"
-									stroke-linecap="round"
-									stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg
+								<span
+									class={cn(
+										'w-7 h-7 flex justify-center items-center flex-shrink-0 bg-white dark:bg-slate-800 dark:text-white border border-gray-200 dark:border-gray-700 font-medium text-gray-800 rounded-full'
+									)}
 								>
-							</span>
-							<span
-								class="ms-2 text-sm font-medium text-gray-800 group-focus:text-gray-500 dark:text-white dark:group-focus:text-gray-400"
-							>
-								Step
-							</span>
-						</span>
-						<div
-							class="w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-blue-500 hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
-						/>
-					</li>
-					<!-- End Item -->
-
-					<!-- Item -->
-					<li class="flex items-center gap-x-2 shrink basis-0 flex-1 group">
-						<span
-							class="min-w-[28px] min-h-[28px] group inline-flex items-center text-xs align-middle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
-						>
-							<span
-								class="w-7 h-7 flex justify-center items-center flex-shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 dark:bg-gray-700 dark:text-white dark:group-focus:bg-gray-600 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
-							>
-								<span class="hs-stepper-success:hidden hs-stepper-completed:hidden">2</span>
-								<svg
-									class="hidden flex-shrink-0 h-3 w-3 hs-stepper-success:block"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="3"
-									stroke-linecap="round"
-									stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg
+									<span class="">{index + 1}</span>
+									<!-- <i class="bi bi-check" /> -->
+								</span>
+								<span
+									class="ms-2 text-sm font-medium text-gray-800 group-focus:text-gray-500 dark:text-white dark:group-focus:text-gray-400"
 								>
+									{step.label}
+								</span>
 							</span>
-							<span
-								class="ms-2 text-sm font-medium text-gray-800 group-focus:text-gray-500 dark:text-white dark:group-focus:text-gray-400"
-							>
-								Step
-							</span>
-						</span>
-						<div
-							class="w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-gray-700 hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
-						/>
-					</li>
-					<!-- End Item -->
-
-					<!-- Item -->
-					<li class="flex items-center gap-x-2 shrink basis-0 flex-1 group">
-						<span
-							class="min-w-[28px] min-h-[28px] group inline-flex items-center text-xs align-middle focus:outline-none disabled:opacity-50 disabled:pointer-events-none"
-						>
-							<span
-								class="w-7 h-7 flex justify-center items-center flex-shrink-0 bg-gray-100 font-medium text-gray-800 rounded-full group-focus:bg-gray-200 dark:bg-gray-700 dark:text-white dark:group-focus:bg-gray-600 hs-stepper-active:bg-blue-600 hs-stepper-active:text-white hs-stepper-success:bg-blue-600 hs-stepper-success:text-white hs-stepper-completed:bg-teal-500 hs-stepper-completed:group-focus:bg-teal-600"
-							>
-								<span class="hs-stepper-success:hidden hs-stepper-completed:hidden">3</span>
-								<svg
-									class="hidden flex-shrink-0 h-3 w-3 hs-stepper-success:block"
-									xmlns="http://www.w3.org/2000/svg"
-									width="24"
-									height="24"
-									viewBox="0 0 24 24"
-									fill="none"
-									stroke="currentColor"
-									stroke-width="3"
-									stroke-linecap="round"
-									stroke-linejoin="round"><polyline points="20 6 9 17 4 12" /></svg
-								>
-							</span>
-							<span
-								class="ms-2 text-sm font-medium text-gray-800 group-focus:text-gray-500 dark:text-white dark:group-focus:text-gray-400"
-							>
-								Step
-							</span>
-						</span>
-						<div
-							class="w-full h-px flex-1 bg-gray-200 group-last:hidden dark:bg-gray-700 hs-stepper-success:bg-blue-600 hs-stepper-completed:bg-teal-600"
-						/>
-					</li>
+						</li>
+					{/each}
 					<!-- End Item -->
 				</ul>
 				<!-- End Stepper Nav -->
@@ -142,7 +82,13 @@
 					{#each steps as step}
 						{#if $page.params.step === step.slug}
 							<div class="bg-gray-50 rounded-xl dark:bg-gray-800">
-								<svelte:component this={step.component} data={forms[step.slug]} />
+								<!-- 
+									Because this component handles multiple forms,
+									the slot component receives data prop with an additional property of the form ids,
+									which will then be used in the implementation as follows:
+									const someFormId = formFunc(data.someFormId)
+								-->
+								<svelte:component this={step.component} data={{ [step.slug]: forms[step.slug] }} />
 							</div>
 						{/if}
 					{/each}

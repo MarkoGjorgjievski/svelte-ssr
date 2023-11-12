@@ -1,9 +1,7 @@
 import ProfileForm from '$lib/templates/forms/register/ProfileForm.svelte';
 import AccountForm from '$lib/templates/forms/register/AccountForm.svelte';
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-import { type ComponentType } from 'svelte';
+import type { ComponentType } from 'svelte';
 
 type Step = { slug: string; label: string; component: ComponentType };
 

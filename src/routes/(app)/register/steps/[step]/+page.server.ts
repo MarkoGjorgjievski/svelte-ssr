@@ -19,7 +19,7 @@ export const load = async () => {
 export const actions = {
 	profile: async ({ request }) => {
 		const form = await superValidate(request, profileSchema);
-		console.log('profile', form);
+		// console.log('profile', form);
 
 		if (!form.valid) {
 			return fail(400, {
@@ -32,7 +32,7 @@ export const actions = {
 
 	account: async ({ request }) => {
 		const form = await superValidate(request, accountSchema);
-		console.log('account', form);
+		// console.log('account', form);
 
 		if (!form.valid) {
 			return fail(400, {

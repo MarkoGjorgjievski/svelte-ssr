@@ -18,3 +18,5 @@ export const registerSchema = z
 			});
 		}
 	});
+
+export type RegisterSchema = typeof registerSchema;

@@ -9,3 +9,5 @@ export const accountSchema = z.object({
 	// confirmPassword: z.string().trim().min(8)
 	// termsAndConditions: z.literal<boolean>(true)
 });
+
+export type AccountSchema = typeof accountSchema;

@@ -2,7 +2,7 @@ import { cva } from 'class-variance-authority';
 
 // Customized button variations
 export const buttonVariants = cva(
-	'inline-flex items-center gap-x-2 text-sm font-semibold bg-transparent border border-transparent dark:focus:outline-none',
+	'inline-flex items-center gap-2 text-sm font-semibold bg-transparent border border-transparent dark:focus:outline-none',
 	{
 		variants: {
 			variant: {

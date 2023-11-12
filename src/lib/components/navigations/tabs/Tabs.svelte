@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	// @ts-ignore
-	import { type ComponentType } from 'svelte';
+	import type { ComponentType } from 'svelte';
 	import { replaceQuery } from '$lib/helpers/replaceQuery';
 
 	type Tab = { query: string; label: string; component: ComponentType };
