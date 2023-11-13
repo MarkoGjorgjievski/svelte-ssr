@@ -56,7 +56,6 @@
 					Full name
 				</label>
 			</div>
-			<!-- End Col -->
 
 			<div class="sm:col-span-9">
 				<div class="sm:flex rounded-lg">

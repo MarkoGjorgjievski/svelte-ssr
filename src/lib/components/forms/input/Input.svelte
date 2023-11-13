@@ -53,8 +53,8 @@
 			</p>{/if}
 	</div>
 {:else}
-	{#if label}<Label {label} variant={floating ? 'floating' : 'default'} {size} />{/if}
 	<div class="relative w-full">
+		{#if label}<Label {label} variant={floating ? 'floating' : 'default'} {size} />{/if}
 		<input
 			use:typeAction
 			{id}
